@@ -126,6 +126,8 @@ export const WordPressProjectModal = ({ project, onClose, returnFocusRef }: Word
                 alt={`${project.title} screenshot ${currentImageIndex + 1} of ${project.images.length}`}
                 className="w-full h-full object-contain"
                 loading="lazy"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
 
