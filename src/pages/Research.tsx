@@ -400,22 +400,22 @@ export default function Research() {
               {publications.map((pub, idx) => (
                 <Card 
                   key={idx} 
-                  className="p-6 hover-lift"
+                  className="p-4 sm:p-6 hover-lift"
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                     <div className="p-3 rounded-lg bg-secondary flex-shrink-0">
-                      <FileText className="h-6 w-6 text-accent" />
+                      <FileText className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-2">
-                        <h3 className="text-lg font-heading font-bold">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-2">
+                        <h3 className="text-base sm:text-lg font-heading font-bold break-words">
                           {pub.title}
                         </h3>
-                        <Badge variant="outline">{pub.year}</Badge>
+                        <Badge variant="outline" className="self-start sm:self-auto flex-shrink-0">{pub.year}</Badge>
                       </div>
-                      <p className="text-sm text-accent mb-2">{pub.conference}</p>
-                      <p className="text-muted-foreground text-sm mb-4">
+                      <p className="text-sm text-accent mb-2 break-words">{pub.conference}</p>
+                      <p className="text-muted-foreground text-sm mb-4 break-words">
                         {pub.summary}
                       </p>
                       {pub.pdfUrl && pub.content ? (
@@ -423,12 +423,13 @@ export default function Research() {
                           variant="ghost" 
                           size="sm"
                           onClick={() => handleViewMore(pub.title, pub.pdfUrl!, pub.content!)}
+                          className="w-full sm:w-auto"
                         >
                           <FileText className="mr-2 h-4 w-4" />
                           View More
                         </Button>
                       ) : (
-                        <Button variant="ghost" size="sm" disabled>
+                        <Button variant="ghost" size="sm" disabled className="w-full sm:w-auto">
                           <FileText className="mr-2 h-4 w-4" />
                           Download Paper (Coming Soon)
                         </Button>
@@ -454,30 +455,31 @@ export default function Research() {
               {innovationProjects.map((project, idx) => (
                 <Card 
                   key={idx} 
-                  className="p-6 hover-lift"
+                  className="p-4 sm:p-6 hover-lift"
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                     <div className="p-3 rounded-lg bg-accent/10 flex-shrink-0">
-                      <Lightbulb className="h-6 w-6 text-accent" />
+                      <Lightbulb className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-2">
-                        <div>
-                          <h3 className="text-lg font-heading font-bold mb-1">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-2">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base sm:text-lg font-heading font-bold mb-1 break-words">
                             {project.title}
                           </h3>
-                          <Badge variant="secondary" className="text-xs">{project.category}</Badge>
+                          <Badge variant="secondary" className="text-xs flex-shrink-0">{project.category}</Badge>
                         </div>
-                        <Badge variant="outline">{project.year}</Badge>
+                        <Badge variant="outline" className="self-start sm:self-auto flex-shrink-0">{project.year}</Badge>
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4 mt-2">
+                      <p className="text-muted-foreground text-sm mb-4 mt-2 break-words">
                         {project.summary}
                       </p>
                       <Button 
                         variant="ghost" 
                         size="sm"
                         onClick={() => handleViewMore(project.title, project.pdfUrl, project.content)}
+                        className="w-full sm:w-auto"
                       >
                         <FileText className="mr-2 h-4 w-4" />
                         View More
@@ -503,30 +505,31 @@ export default function Research() {
               {standardsProjects.map((project, idx) => (
                 <Card 
                   key={idx} 
-                  className="p-6 hover-lift"
+                  className="p-4 sm:p-6 hover-lift"
                   style={{ animationDelay: `${idx * 0.1}s` }}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
                     <div className="p-3 rounded-lg bg-secondary flex-shrink-0">
-                      <Trophy className="h-6 w-6 text-accent" />
+                      <Trophy className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between gap-4 mb-2">
-                        <div>
-                          <h3 className="text-lg font-heading font-bold mb-1">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4 mb-2">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-base sm:text-lg font-heading font-bold mb-1 break-words">
                             {project.title}
                           </h3>
-                          <Badge variant="secondary" className="text-xs">{project.event}</Badge>
+                          <Badge variant="secondary" className="text-xs flex-shrink-0">{project.event}</Badge>
                         </div>
-                        <Badge variant="outline">{project.year}</Badge>
+                        <Badge variant="outline" className="self-start sm:self-auto flex-shrink-0">{project.year}</Badge>
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4 mt-2">
+                      <p className="text-muted-foreground text-sm mb-4 mt-2 break-words">
                         {project.summary}
                       </p>
                       <Button 
                         variant="ghost" 
                         size="sm"
                         onClick={() => handleViewMore(project.title, project.pdfUrl, project.content)}
+                        className="w-full sm:w-auto"
                       >
                         <FileText className="mr-2 h-4 w-4" />
                         View More

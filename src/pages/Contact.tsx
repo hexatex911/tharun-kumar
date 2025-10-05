@@ -23,14 +23,14 @@ export default function Contact() {
           {/* Contact Info */}
           <Card className="p-6 hover-lift">
             <div className="flex items-start gap-4">
-              <div className="p-3 rounded-lg bg-accent/10">
+              <div className="p-3 rounded-lg bg-accent/10 flex-shrink-0">
                 <Mail className="h-6 w-6 text-accent" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <h3 className="font-heading font-bold mb-2">Email</h3>
                 <a 
                   href="mailto:tharunkumardeveloper@gmail.com"
-                  className="text-muted-foreground hover:text-accent transition-colors"
+                  className="text-muted-foreground hover:text-accent transition-colors break-all text-sm sm:text-base"
                 >
                   tharunkumardeveloper@gmail.com
                 </a>

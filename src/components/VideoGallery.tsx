@@ -137,6 +137,7 @@ export const VideoGallery = ({ videos }: VideoGalleryProps) => {
                 src={getThumbnailSrc(video, idx)}
                 alt={video.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors flex items-center justify-center">
                 <Play className="h-6 w-6 text-white" fill="white" />

@@ -25,6 +25,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
               src={images[selectedIndex ?? 0].src}
               alt={images[selectedIndex ?? 0].caption}
               className="w-full h-full object-contain"
+              loading="lazy"
             />
           </div>
           <div className="mt-4 text-center">
@@ -77,6 +78,7 @@ export const ImageGallery = ({ images }: ImageGalleryProps) => {
                 src={image.src}
                 alt={image.caption}
                 className="w-full h-full object-cover"
+                loading="lazy"
               />
             </button>
           ))}

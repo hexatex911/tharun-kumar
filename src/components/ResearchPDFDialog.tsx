@@ -29,6 +29,7 @@ export const ResearchPDFDialog = ({
               src={`https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + pdfUrl)}&embedded=true`}
               className="w-full h-full"
               title={title}
+              loading="lazy"
             />
           </div>
           
