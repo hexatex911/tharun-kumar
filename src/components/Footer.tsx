@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Linkedin, Github, Music } from 'lucide-react';
+import { Linkedin, Github } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -51,15 +51,6 @@ export const Footer = () => {
               aria-label="GitHub"
             >
               <Github className="h-4 w-4 sm:h-5 sm:w-5" />
-            </a>
-            <a
-              href="https://open.spotify.com/show/justrelaxmachi"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 rounded-full bg-secondary hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110 hover:rotate-6"
-              aria-label="Podcast"
-            >
-              <Music className="h-4 w-4 sm:h-5 sm:w-5" />
             </a>
           </div>
         </div>
