@@ -8,6 +8,7 @@ import talenttrackMock from '@/assets/talenttrack-cover.png';
 import venmathiMock from '@/assets/venmathi-indicraft-home.png';
 import indicraftMock from '@/assets/indicraft-hero.png';
 import aeroponicsMock from '@/assets/aeroponics-hero.jpeg';
+import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const projects = [
   {
@@ -65,6 +66,20 @@ const projects = [
     ],
     image: aeroponicsMock,
     category: ['All', 'Research', 'IoT'],
+  },
+  {
+    title: 'INSIGHT IQ',
+    slug: 'insightiq',
+    description: 'Strategic intelligence platform providing real-time market intelligence across 10 technology domains.',
+    role: 'Full-stack Developer — Platform architecture, analytics dashboard, AI-powered insights',
+    tech: ['React', 'FastAPI', 'Python', 'Recharts', 'TextBlob', 'PostgreSQL'],
+    highlights: [
+      '10 technology domains with 50+ competitor tracking',
+      'AI-powered sentiment analysis & trend detection',
+      '12+ interactive charts with real-time analytics',
+    ],
+    image: insightiqMock,
+    category: ['All', 'AI', 'Web'],
   },
 ];
 

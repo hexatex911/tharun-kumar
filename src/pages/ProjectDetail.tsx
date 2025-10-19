@@ -35,6 +35,15 @@ import indicraftAbout from '@/assets/indicraft-about.png';
 import indicraftDashboard from '@/assets/indicraft-dashboard.png';
 import indicraftProductsManagement from '@/assets/indicraft-products-management.png';
 import aeroponicsMock from '@/assets/aeroponics-hero.jpeg';
+import insightiqMock from '@/assets/insightiq-dashboard.png';
+import insightiqDomainModal from '@/assets/insightiq-domain-modal.png';
+import insightiqCharts from '@/assets/insightiq-charts.png';
+import insightiqMarket from '@/assets/insightiq-market.png';
+import insightiqSocial from '@/assets/insightiq-social.png';
+import insightiqCompetitorsWeb3 from '@/assets/insightiq-competitors-web3.png';
+import insightiqCompetitorsCloud from '@/assets/insightiq-competitors-cloud.png';
+import insightiqAlerts from '@/assets/insightiq-alerts.png';
+import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greentech.png';
 
 const projectDetails: Record<string, any> = {
   talenttrack: {
@@ -195,6 +204,51 @@ const projectDetails: Record<string, any> = {
       'Awarded IEEE SIGHT funding: $3,300',
       'Prototype demonstrated 40% reduction in water usage vs. traditional farming',
       'System supports 50+ plants in 4 sq ft footprint',
+    ],
+  },
+  insightiq: {
+    title: 'INSIGHT IQ — Strategic Intelligence Platform',
+    image: insightiqMock,
+    gallery: [
+      { src: insightiqDomainModal, caption: 'Domain selection interface for 10 technology sectors', orientation: 'horizontal' },
+      { src: insightiqMock, caption: 'Dashboard showing competitor intelligence cards for Semiconductors & Hardware', orientation: 'horizontal' },
+      { src: insightiqCharts, caption: 'Sentiment over time and mentions by competitor analytics', orientation: 'horizontal' },
+      { src: insightiqMarket, caption: 'Market intelligence view with sentiment trends and topic analysis', orientation: 'horizontal' },
+      { src: insightiqSocial, caption: 'Social buzz and sentiment tracking across platforms', orientation: 'horizontal' },
+      { src: insightiqCompetitorsWeb3, caption: 'Competitor analysis for Web3, Blockchain & Crypto domain', orientation: 'horizontal' },
+      { src: insightiqCompetitorsCloud, caption: 'Cloud Computing & SaaS competitor intelligence', orientation: 'horizontal' },
+      { src: insightiqAlerts, caption: 'AI-powered intelligent alerts for Quantum Computing', orientation: 'horizontal' },
+      { src: insightiqCompetitorsGreentech, caption: 'Green Tech & Energy Innovation competitor analysis with SWOT', orientation: 'horizontal' },
+    ],
+    summary: 'INSIGHT IQ is a comprehensive strategic intelligence platform that provides real-time market intelligence, competitive analysis, and automated insights across 10 major technology sectors. Built for strategic decision-makers and market analysts.',
+    role: 'Full-stack Developer — Platform architecture, analytics dashboard, AI-powered insights engine',
+    tech: ['React 18', 'FastAPI', 'Python', 'Recharts', 'TextBlob', 'Tailwind CSS', 'Pandas', 'Vite'],
+    problem: 'Strategic decision-makers struggle to track competitors across multiple technology domains with fragmented data sources, manual sentiment analysis, and delayed insights. Traditional market intelligence tools lack real-time analytics and AI-powered trend detection.',
+    approach: `Built a comprehensive web platform with:
+• Multi-Domain Coverage: Track 10 technology sectors with 50+ key competitors
+• AI-Powered Analytics: Automated sentiment analysis using TextBlob for news and social media
+• Interactive Dashboards: 12+ chart types including sentiment trends, market share, and topic clustering
+• Intelligent Alerts: AI-driven notifications for mention spikes, sentiment shifts, and emerging trends
+• Real-Time Data Processing: FastAPI backend with Pandas for data manipulation and analysis
+• Responsive UI: React 18 with Tailwind CSS for mobile-first design
+• Data Architecture: CSV-based data ingestion with automated processing pipeline
+• Competitive Intelligence Hub: Deep competitor analysis with SWOT analysis and market positioning`,
+    challenges: [
+      'Processing and analyzing large volumes of news and social media data in real-time',
+      'Building accurate sentiment analysis for domain-specific technical content',
+      'Creating intuitive visualizations for 12+ different chart types with responsive design',
+      'Implementing efficient data caching and state management across domains',
+      'Ensuring fast rendering performance with large datasets and complex charts',
+    ],
+    outcomes: [
+      'Successfully tracks 10 technology domains with 50+ competitors',
+      '12+ interactive chart types with real-time analytics and export capabilities',
+      'AI-powered sentiment analysis processing 1000+ articles and social posts',
+      'Intelligent alert system detecting market shifts and emerging trends',
+      'GitHub: github.com/tharunkumardeveloper/INSIGHT-IQ-MODULE-4',
+    ],
+    links: [
+      { label: 'GitHub Repository', url: 'https://github.com/tharunkumardeveloper/INSIGHT-IQ-MODULE-4' },
     ],
   },
 };

@@ -155,7 +155,7 @@ export default function Home() {
                 description="IEEE SIGHT funding for aeroponics research"
               />
               <StatCounter
-                end={1200}
+                end={1300}
                 suffix="+"
                 label="LinkedIn Followers"
                 description="Growing professional network"
