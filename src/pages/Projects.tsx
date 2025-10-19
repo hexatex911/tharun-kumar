@@ -12,6 +12,20 @@ import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const projects = [
   {
+    title: 'INSIGHT IQ',
+    slug: 'insightiq',
+    description: 'Strategic intelligence platform providing real-time market intelligence across 10 technology domains.',
+    role: 'Full-stack Developer — Platform architecture, analytics dashboard, AI-powered insights',
+    tech: ['React', 'FastAPI', 'Python', 'Recharts', 'TextBlob', 'PostgreSQL'],
+    highlights: [
+      '10 technology domains with 50+ competitor tracking',
+      'AI-powered sentiment analysis & trend detection',
+      '12+ interactive charts with real-time analytics',
+    ],
+    image: insightiqMock,
+    category: ['All', 'AI', 'Web'],
+  },
+  {
     title: 'TalentTrack',
     slug: 'talenttrack',
     description: 'Democratizing athlete evaluation using only a smartphone camera.',
@@ -66,20 +80,6 @@ const projects = [
     ],
     image: aeroponicsMock,
     category: ['All', 'Research', 'IoT'],
-  },
-  {
-    title: 'INSIGHT IQ',
-    slug: 'insightiq',
-    description: 'Strategic intelligence platform providing real-time market intelligence across 10 technology domains.',
-    role: 'Full-stack Developer — Platform architecture, analytics dashboard, AI-powered insights',
-    tech: ['React', 'FastAPI', 'Python', 'Recharts', 'TextBlob', 'PostgreSQL'],
-    highlights: [
-      '10 technology domains with 50+ competitor tracking',
-      'AI-powered sentiment analysis & trend detection',
-      '12+ interactive charts with real-time analytics',
-    ],
-    image: insightiqMock,
-    category: ['All', 'AI', 'Web'],
   },
 ];
 
