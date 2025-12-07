@@ -12,6 +12,63 @@ import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const projects = [
   {
+    title: 'Talent Track',
+    slug: 'talenttrack',
+    description: 'AI-powered fitness analysis platform that turns any smartphone camera into a professional-grade workout evaluation system with no gym, no wearables, and no subscriptions.',
+    role: 'Solo Developer — Built in 10.5 days using Kiro AI',
+    tech: ['MediaPipe', 'React', 'AI Pose Detection', 'Computer Vision', 'Browser-based ML'],
+    highlights: [
+      'Real-time AI pose detection using MediaPipe (33 body landmarks)',
+      'Rep counting, joint-angle tracking & live form scoring (0–100)',
+      'Ghost Mode – train against a perfect AI skeleton',
+      'Evaluator Test Mode – instant performance analysis without video upload',
+      'FitFranken AI chatbot – explains performance & gives coaching tips',
+      'Badge & streak system for motivation and habit building',
+      'Full privacy-first design – all processing happens locally in the browser',
+      'Built in just 10.5 days, saving over 62% development time with spec-driven dev',
+    ],
+    image: talenttrackMock,
+    liveUrl: 'https://talent-track-cyber.vercel.app',
+    category: ['All', 'AI', 'Web', 'Fitness'],
+  },
+  {
+    title: 'JARVIS AI Assistant',
+    slug: 'jarvis',
+    description: 'JARVIS-inspired AI agent built for Google Cloud Run Hackathon. An AI-powered offline conversational agent that switches seamlessly to online mode when connected.',
+    role: 'Solo Developer — Google Cloud Run Hackathon Project',
+    tech: ['Google Cloud Run', 'Gmail API', 'Google Meet', 'Google Docs API', 'Google Vision API', 'Python', 'AI/ML'],
+    highlights: [
+      'Chat naturally with users (voice & text modes)',
+      'Send emails via Gmail API',
+      'Schedule meetings using Google Meet',
+      'Read and summarize Google Docs',
+      'Use Google Vision API for image understanding',
+      'Manage a contact section for quick communication',
+      'Handle file attachments effortlessly',
+      'Works offline with local intelligence, supercharged when online',
+    ],
+    image: '/images/jarvis-1.png',
+    videoUrl: 'https://www.youtube.com/watch?v=2jOhWb1g8oQ',
+    category: ['All', 'AI', 'Cloud', 'Hackathon'],
+  },
+  {
+    title: 'Vertical Tower Aeroponics',
+    slug: 'aeroponics',
+    description: 'Innovative vertical farming solution using aeroponics technology to grow plants without soil, maximizing space efficiency and resource conservation for sustainable urban agriculture.',
+    role: 'Lead Researcher — IoT integration & system design',
+    tech: ['IoT', 'Arduino', 'Sensors', 'Aeroponics', 'Cloud Platform', 'Sustainable Agriculture'],
+    highlights: [
+      'Vertical tower design for space optimization',
+      'Automated nutrient delivery system',
+      'IoT-enabled monitoring and control',
+      'Water-efficient aeroponic misting',
+      'Sustainable urban agriculture solution',
+      'Addresses food security challenges in urban environments',
+    ],
+    image: aeroponicsMock,
+    category: ['All', 'Research', 'IoT', 'Agriculture'],
+  },
+  {
     title: 'INSIGHT IQ',
     slug: 'insightiq',
     description: 'Strategic intelligence platform providing real-time market intelligence across 10 technology domains.',
@@ -24,20 +81,6 @@ const projects = [
     ],
     image: insightiqMock,
     category: ['All', 'AI', 'Web'],
-  },
-  {
-    title: 'TalentTrack',
-    slug: 'talenttrack',
-    description: 'Democratizing athlete evaluation using only a smartphone camera.',
-    role: 'Technical Lead — Flutter + CV pipeline owner',
-    tech: ['Flutter', 'MediaPipe', 'OpenCV', 'Firebase', 'Node.js'],
-    highlights: [
-      'On-device pose estimation for privacy & speed',
-      'Lighting/framing checks & anomaly detection to ensure fair evaluation',
-      'Para-athlete adaptive protocols & gamified progression (100 badges)',
-    ],
-    image: talenttrackMock,
-    category: ['All', 'AI', 'Mobile'],
   },
   {
     title: 'Venmathi',
@@ -67,23 +110,9 @@ const projects = [
     image: indicraftMock,
     category: ['All', 'Web', 'Freelance'],
   },
-  {
-    title: 'Vertical Tower Farming',
-    slug: 'aeroponics',
-    description: 'Patent-published vertical aeroponics system with IoT monitoring; IEEE SIGHT funding $3,300.',
-    role: 'Lead Researcher — IoT integration & patent filing',
-    tech: ['IoT', 'Arduino', 'Sensors', 'Cloud Platform', 'Aeroponics'],
-    highlights: [
-      'Patent published for vertical farming system',
-      'IEEE SIGHT funding: $3,300',
-      'Sustainable agriculture solution for urban environments',
-    ],
-    image: aeroponicsMock,
-    category: ['All', 'Research', 'IoT'],
-  },
 ];
 
-const filters = ['All', 'AI', 'Web', 'Research', 'Freelance', 'Mobile', 'IoT', 'WordPress'];
+const filters = ['All', 'AI', 'Web', 'Research', 'Freelance', 'IoT', 'Cloud', 'Fitness', 'Agriculture', 'Hackathon', 'WordPress'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');

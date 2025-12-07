@@ -8,62 +8,61 @@ import { ArrowRight, Download, Mail } from 'lucide-react';
 import { innovationProjects } from '@/data/researchProjects';
 import profileProfessional from '@/assets/profile-professional.png';
 import talenttrackHero from '@/assets/talenttrack-cover.png';
-import venmathiMock from '@/assets/venmathi-indicraft-home.png';
-import indicraftMock from '@/assets/indicraft-hero.png';
 import aeroponicsMock from '@/assets/aeroponics-hero.jpeg';
+import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const featuredProjects = [
   {
-    title: 'TalentTrack',
+    title: 'Talent Track',
     slug: 'talenttrack',
-    description: 'Democratizing athlete evaluation using only a smartphone camera.',
-    role: 'Technical Lead — Flutter + CV pipeline owner',
-    tech: ['Flutter', 'MediaPipe', 'OpenCV', 'Firebase', 'Node.js'],
+    description: 'AI-powered fitness analysis platform that turns any smartphone camera into a professional-grade workout evaluation system.',
+    role: 'Solo Developer — Built in 10.5 days using Kiro AI',
+    tech: ['MediaPipe', 'React', 'AI Pose Detection', 'Computer Vision'],
     highlights: [
-      'On-device pose estimation for privacy & speed',
-      'Lighting/framing checks & anomaly detection',
-      'Para-athlete adaptive protocols & gamified progression',
+      'Real-time AI pose detection (33 body landmarks)',
+      'Ghost Mode & live form scoring (0-100)',
+      'Privacy-first - all processing in browser',
     ],
     image: talenttrackHero,
-    category: ['AI', 'Mobile'],
-  },
-  {
-    title: 'Venmathi',
-    slug: 'venmathi',
-    description: 'Fine-tuned LLaMA assistant delivering Tanglish responses for customer support.',
-    role: 'Full pipeline — dataset generation, fine-tuning, quantization',
-    tech: ['LLaMA 3', 'Python', 'Ollama', 'React', 'Netlify'],
-    highlights: [
-      'Custom Tanglish dataset generation',
-      'Quantized model for edge deployment',
-      'Integrated into Indicraft marketplace',
-    ],
-    image: venmathiMock,
     category: ['AI', 'Web'],
   },
   {
-    title: 'Indicraft',
-    slug: 'indicraft',
-    description: 'Marketplace linking Indian artisans with global diaspora, verified products & India Post shipping.',
-    role: 'Platform contributor — frontend, onboarding flows',
-    tech: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'India Post API'],
+    title: 'INSIGHT IQ',
+    slug: 'insightiq',
+    description: 'Strategic intelligence platform providing real-time market intelligence across 10 technology domains.',
+    role: 'Full-stack Developer — Platform architecture & AI insights',
+    tech: ['React', 'FastAPI', 'Python', 'Recharts', 'TextBlob'],
     highlights: [
-      'Verified artisan onboarding system',
-      'AI recommendation engine for festivals',
-      'Fair-pay model for artisans (SDG 8, 12, 17)',
+      '10 technology domains with 50+ competitors',
+      'AI-powered sentiment analysis',
+      '12+ interactive charts with real-time analytics',
     ],
-    image: indicraftMock,
-    category: ['Web', 'E-commerce'],
+    image: insightiqMock,
+    category: ['AI', 'Web'],
   },
   {
-    title: 'Vertical Tower Farming',
-    slug: 'aeroponics',
-    description: 'Patent-published vertical aeroponics system with IoT monitoring.',
-    role: 'Lead Researcher — IoT integration & patent filing',
-    tech: ['IoT', 'Arduino', 'Sensors', 'Cloud Platform'],
+    title: 'JARVIS AI Assistant',
+    slug: 'jarvis',
+    description: 'JARVIS-inspired AI agent for Google Cloud Run Hackathon with offline/online hybrid intelligence.',
+    role: 'Solo Developer — Google Cloud Run Hackathon',
+    tech: ['Google Cloud Run', 'Gmail API', 'Google Meet', 'Vision API'],
     highlights: [
-      'Patent published',
-      'IEEE SIGHT funding: $3,300',
+      'Voice & text conversation modes',
+      'Seamless offline-to-online switching',
+      'Integrated 5+ Google Cloud APIs',
+    ],
+    image: '/images/jarvis-1.png',
+    category: ['AI', 'Cloud'],
+  },
+  {
+    title: 'Vertical Tower Aeroponics',
+    slug: 'aeroponics',
+    description: 'Innovative vertical farming solution using aeroponics for sustainable urban agriculture.',
+    role: 'Lead Researcher — IoT integration & system design',
+    tech: ['IoT', 'Arduino', 'Sensors', 'Aeroponics'],
+    highlights: [
+      'Vertical tower design for space optimization',
+      'IoT-enabled monitoring and control',
       'Sustainable agriculture solution',
     ],
     image: aeroponicsMock,
@@ -136,7 +135,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
               <StatCounter
                 end={19}
                 suffix="+"
@@ -155,10 +154,15 @@ export default function Home() {
                 description="IEEE SIGHT funding for aeroponics research"
               />
               <StatCounter
-                end={1300}
+                end={1400}
                 suffix="+"
                 label="LinkedIn Followers"
                 description="Growing professional network"
+              />
+              <StatCounter
+                end={5}
+                label="Publications"
+                description="Research papers and technical publications"
               />
             </div>
           </ScrollReveal>

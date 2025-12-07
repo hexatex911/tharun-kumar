@@ -47,9 +47,20 @@ import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greent
 
 const projectDetails: Record<string, any> = {
   talenttrack: {
-    title: 'TalentTrack — Smartphone Athlete Assessment',
+    title: 'Talent Track — AI-Powered Fitness Analysis Platform',
     image: talenttrackMock,
     gallery: [
+      { src: '/images/talenttrack-new-1.png', caption: 'Talent Track homepage with AI-powered fitness analysis', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-2.png', caption: 'Real-time pose detection with 33 body landmarks', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-3.png', caption: 'Ghost Mode - train against a perfect AI skeleton', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-4.png', caption: 'Live form scoring (0-100) with joint-angle tracking', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-5.png', caption: 'Evaluator Test Mode for instant performance analysis', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-6.png', caption: 'FitFranken AI chatbot providing coaching tips', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-7.png', caption: 'Badge system for motivation and habit building', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-8.png', caption: 'Streak tracking for consistent training', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-9.png', caption: 'Rep counting with real-time feedback', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-10.png', caption: 'Privacy-first design - all processing in browser', orientation: 'horizontal' },
+      { src: '/images/talenttrack-new-11.png', caption: 'Performance dashboard with detailed analytics', orientation: 'horizontal' },
       { src: talenttrackRoleSelection, caption: 'Web UI - Role selection for Student, Staff, and Admin', orientation: 'horizontal' },
       { src: talenttrackAssessment, caption: 'Assessment interface with activity selection', orientation: 'horizontal' },
       { src: talenttrackPosePushup, caption: 'Real-time pose estimation during push-up assessment', orientation: 'vertical' },
@@ -74,38 +85,41 @@ const projectDetails: Record<string, any> = {
       { src: '/videos/shuttlerun.mp4', title: 'Shuttle Run Assessment Demo' },
       { src: '/videos/sit_reach.mp4', title: 'Sit & Reach Assessment Demo' },
     ],
-    pdfUrl: '/documents/talenttrack-presentation.pdf',
-    summary: 'TalentTrack is an AI-first mobile app that democratizes athletic assessment using only a smartphone camera. Built for Smart India Hackathon 2025, it provides fair, accessible talent evaluation for athletes across India, including para-athletes.',
-    role: 'Technical lead — Flutter front-end, CV pipeline owner, anomaly detection, gamification design',
-    tech: ['Flutter', 'MediaPipe', 'OpenCV', 'Firebase', 'Node.js', 'Real-time CV'],
-    problem: 'Traditional talent scouting requires expensive equipment and is inaccessible in rural India. Athletes from remote areas have limited opportunities to showcase their abilities. Para-athletes face additional barriers due to lack of adaptive assessment protocols.',
-    approach: `Built a complete smartphone-based assessment platform:
-• On-device MediaPipe pose estimation for real-time feedback
-• OpenCV preprocessing for lighting/framing validation  
-• Anomaly detection to prevent fraud attempts
-• Server-side aggregation for leaderboards (Firebase)
-• Adaptive protocols for para-athletes with modified metrics
-• Gamification system with 100+ badges and challenges
-• Multi-role platform: Student, Staff (coaches), and Admin (SAI)
-• Web dashboard for analytics and progress tracking`,
+    pdfUrl: '/documents/talenttrack-new.pdf',
+    summary: 'Talent Track is an AI-powered fitness analysis platform that turns any smartphone camera into a professional-grade workout evaluation system with no gym, no wearables, and no subscriptions. Built in just 10.5 days using Kiro AI.',
+    role: 'Solo Developer — Built in 10.5 days using Kiro AI, saving over 62% development time with spec-driven dev, steering docs, agent hooks, and MCP extensions',
+    tech: ['MediaPipe', 'React', 'AI Pose Detection', 'Computer Vision', 'Browser-based ML', 'Kiro AI'],
+    problem: 'Fitness technology is often expensive, requires gym memberships, wearables, or subscriptions. Students, para-athletes, and people with only a smartphone lack access to elite-level workout feedback and professional-grade analysis.',
+    approach: `Built a comprehensive browser-based fitness platform with:
+• Real-time AI pose detection using MediaPipe (33 body landmarks)
+• Rep counting with joint-angle tracking for accurate form analysis
+• Live form scoring (0–100) providing instant feedback
+• Ghost Mode – train against a perfect AI skeleton for visual guidance
+• Evaluator Test Mode – instant performance analysis without video upload
+• FitFranken AI chatbot – explains performance & gives personalized coaching tips
+• Badge & streak system for motivation and habit building
+• Full privacy-first design – all processing happens locally in the browser
+• No gym, no wearables, no subscriptions required
+• Built using Kiro AI with spec-driven development and agent hooks`,
     challenges: [
-      'Ensuring fair evaluation across different lighting and environmental conditions',
-      'Detecting and preventing fraud attempts (video replays, incorrect camera angles)',
-      'Building adaptive protocols for para-athletes with different mobility levels',
-      'Optimizing on-device processing for older Android smartphones',
-      'Creating intuitive UI for non-tech-savvy users in rural areas',
+      'Implementing accurate real-time pose detection in the browser',
+      'Ensuring privacy by processing all data locally without server uploads',
+      'Creating an intuitive UI for users of all fitness levels',
+      'Building a comprehensive AI chatbot for personalized coaching',
+      'Optimizing performance for smooth real-time analysis',
+      'Completing the entire project in just 10.5 days',
     ],
     outcomes: [
-      'Successfully submitted to Smart India Hackathon 2025',
-      'Prototype tested with pilot group of 50+ athletes',
-      'Gamification improved retention by 40% in pilot tests',
-      'Recognition for inclusive design approach for para-athletes',
-      'Live web app: talent-track-v2.netlify.app',
-      'Mobile app demo: talent-track-sih.netlify.app',
+      'Successfully launched at https://talent-track-cyber.vercel.app',
+      'Built in just 10.5 days, saving over 62% development time',
+      'Real-time pose detection with 33 body landmarks tracking',
+      'Privacy-first design with 100% local processing',
+      'Accessible fitness technology for students and para-athletes',
+      'Gamification system improving user engagement and retention',
+      'AI chatbot providing personalized coaching and feedback',
     ],
     links: [
-      { label: 'Web Platform', url: 'https://talent-track-v2.netlify.app' },
-      { label: 'Mobile App Demo', url: 'https://talent-track-sih.netlify.app' },
+      { label: 'Live Demo', url: 'https://talent-track-cyber.vercel.app' },
     ],
   },
   venmathi: {
@@ -177,33 +191,104 @@ const projectDetails: Record<string, any> = {
       'Featured in college innovation showcase',
     ],
   },
+  jarvis: {
+    title: 'JARVIS AI Assistant — Google Cloud Run Hackathon',
+    image: '/images/jarvis-1.png',
+    gallery: [
+      { src: '/images/jarvis-1.png', caption: 'JARVIS AI Assistant main interface', orientation: 'horizontal' },
+      { src: '/images/jarvis-2.png', caption: 'Voice and text conversation modes', orientation: 'horizontal' },
+      { src: '/images/jarvis-3.png', caption: 'Google Cloud integrations dashboard', orientation: 'horizontal' },
+      { src: '/images/jarvis-4.png', caption: 'Contact management and file handling', orientation: 'horizontal' },
+    ],
+    videos: [
+      { youtubeId: '2jOhWb1g8oQ', title: 'JARVIS AI Assistant Demo', thumbnail: '/images/jarvis-1.png' },
+    ],
+    summary: 'A JARVIS-inspired AI agent built for the Google Cloud Run Hackathon. An AI-powered offline conversational agent that switches seamlessly to online mode when connected, enabling cloud-powered capabilities.',
+    role: 'Solo Developer — Google Cloud Run Hackathon Project',
+    tech: ['Google Cloud Run', 'Gmail API', 'Google Meet', 'Google Docs API', 'Google Vision API', 'Python', 'AI/ML'],
+    problem: 'Personal AI assistants typically require constant internet connectivity and don\'t gracefully handle offline scenarios. Users need an assistant that works locally but can leverage cloud capabilities when available.',
+    approach: `Built a hybrid AI assistant with:
+• Offline conversational AI for local intelligence
+• Seamless online mode switching for cloud capabilities
+• Gmail API integration for email management
+• Google Meet integration for meeting scheduling
+• Google Docs API for document reading and summarization
+• Google Vision API for image understanding
+• Contact management system for quick communication
+• File attachment handling for document processing
+• Voice and text conversation modes
+• Hybrid architecture bridging local and cloud intelligence`,
+    challenges: [
+      'Implementing seamless offline-to-online mode switching',
+      'Integrating multiple Google Cloud APIs cohesively',
+      'Building natural voice and text conversation interfaces',
+      'Handling authentication and security for multiple APIs',
+      'Optimizing performance for real-time responses',
+      'Creating an intuitive UI inspired by Iron Man\'s JARVIS',
+    ],
+    outcomes: [
+      'Successfully completed for Google Cloud Run Hackathon',
+      'Deepened understanding of Google Cloud Console and API integrations',
+      'Built hybrid AI system bridging local and cloud intelligence',
+      'Implemented voice and text conversation modes',
+      'Integrated 5+ Google Cloud APIs seamlessly',
+      'YouTube demo: https://www.youtube.com/watch?v=2jOhWb1g8oQ',
+    ],
+    links: [
+      { label: 'YouTube Demo', url: 'https://www.youtube.com/watch?v=2jOhWb1g8oQ' },
+    ],
+  },
   aeroponics: {
-    title: 'Vertical Tower Farming — Patent-Published Aeroponics System',
+    title: 'Vertical Tower Aeroponics — Sustainable Urban Farming',
     image: aeroponicsMock,
     gallery: [
       { src: aeroponicsMock, caption: 'Vertical Aeroponics hero - Future-Forward Farming Solutions', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-1.png', caption: 'Vertical tower design for space optimization', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-2.png', caption: 'Automated nutrient delivery system', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-3.png', caption: 'IoT-enabled monitoring dashboard', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-4.png', caption: 'Real-time environmental parameter tracking', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-5.png', caption: 'Water-efficient aeroponic misting system', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-6.png', caption: 'Plant health monitoring interface', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-7.png', caption: 'Nutrient level control system', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-8.png', caption: 'Temperature and humidity sensors', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-9.png', caption: 'Cloud platform for remote monitoring', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-10.png', caption: 'System analytics and performance metrics', orientation: 'horizontal' },
+      { src: '/images/aeroponics-new-11.png', caption: 'Sustainable agriculture solution for urban environments', orientation: 'horizontal' },
       { src: '/images/aeroponics-patent.jpg', caption: 'Patent application published - Application No. 202441076822', orientation: 'horizontal' },
       { src: '/images/aeroponics-funding.jpg', caption: 'IEEE SIGHT Tech4Good funding award - $3,300 for Vertical Tower Farming project', orientation: 'horizontal' },
       { src: '/images/aeroponics-team.jpg', caption: 'Project team at vertical farming initiative inauguration', orientation: 'horizontal' },
       { src: '/images/aeroponics-login.jpeg', caption: 'User login and registration interface', orientation: 'horizontal' },
       { src: '/images/aeroponics-dashboard.jpeg', caption: 'IoT dashboard showing real-time TDS levels and environmental parameters', orientation: 'horizontal' },
     ],
-    summary: 'A patent-published vertical aeroponics system with IoT monitoring for sustainable urban agriculture, enabling efficient plant growth with automated climate control.',
-    role: 'Lead Researcher — IoT integration, sensor systems, patent filing',
-    tech: ['IoT', 'Arduino', 'Sensors', 'Cloud Platform', 'Aeroponics'],
-    problem: 'Urban areas face space constraints for traditional farming, and conventional agriculture is water-intensive and climate-dependent. Sustainable food production in cities requires innovative vertical solutions.',
-    approach: 'Designed and built a vertical tower system with aeroponics (nutrient mist delivery), integrated IoT sensors for real-time monitoring of temperature, humidity, nutrient levels, and plant health. Cloud platform aggregates data for remote monitoring and automated adjustments.',
+    summary: 'An innovative vertical farming solution using aeroponics technology to grow plants without soil, maximizing space efficiency and resource conservation for sustainable urban agriculture.',
+    role: 'Lead Researcher — IoT integration, system design, sensor implementation',
+    tech: ['IoT', 'Arduino', 'Sensors', 'Aeroponics', 'Cloud Platform', 'Sustainable Agriculture'],
+    problem: 'Urban areas face severe space constraints for traditional farming, and conventional agriculture is water-intensive, climate-dependent, and unsustainable. Cities need innovative vertical solutions to address food security challenges.',
+    approach: `Designed and built a comprehensive vertical farming system with:
+• Vertical tower design for maximum space optimization
+• Automated nutrient delivery system with precise control
+• IoT-enabled monitoring and control for real-time management
+• Water-efficient aeroponic misting technology
+• Environmental sensors for temperature, humidity, and nutrient levels
+• Cloud platform for remote monitoring and data analytics
+• Sustainable agriculture solution for urban environments
+• Automated climate control for optimal plant growth
+• Resource conservation through efficient water and nutrient usage`,
     challenges: [
       'Maintaining consistent nutrient delivery across all tower levels',
       'Preventing mold and bacterial growth in humid environment',
       'Ensuring system reliability for 24/7 operation',
       'Optimizing power consumption for IoT sensors',
+      'Balancing automation with manual control options',
+      'Scaling the system for commercial urban farming',
     ],
     outcomes: [
-      'Patent published for vertical farming system design',
-      'Awarded IEEE SIGHT funding: $3,300',
-      'Prototype demonstrated 40% reduction in water usage vs. traditional farming',
+      'Successfully deployed vertical tower system',
+      'Demonstrated 40% reduction in water usage vs. traditional farming',
       'System supports 50+ plants in 4 sq ft footprint',
+      'IoT monitoring enables remote management and optimization',
+      'Addresses food security challenges in urban environments',
+      'Sustainable agriculture solution with minimal environmental impact',
     ],
   },
   insightiq: {
