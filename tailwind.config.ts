@@ -124,6 +124,10 @@ export default {
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" }
+        },
+        "scroll-x": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }
         }
       },
       animation: {
@@ -140,6 +144,7 @@ export default {
         "spin-reverse": "spin-reverse 3s linear infinite",
         "loading-bar": "loading-bar 1.5s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
+        "scroll-x": "scroll-x 30s linear infinite",
       },
     },
   },

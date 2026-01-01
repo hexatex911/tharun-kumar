@@ -4,6 +4,7 @@ import { StatCounter } from '@/components/StatCounter';
 import { ProjectCard } from '@/components/ProjectCard';
 import { ResearchCard } from '@/components/ResearchCard';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { CertificationSlider } from '@/components/CertificationSlider';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import { innovationProjects } from '@/data/researchProjects';
 import profileProfessional from '@/assets/profile-professional.png';
@@ -172,6 +173,13 @@ export default function Home() {
             </div>
           </ScrollReveal>
         </div>
+      </section>
+
+      {/* Certifications Slider */}
+      <section className="py-8 sm:py-12">
+        <ScrollReveal animation="fade-up">
+          <CertificationSlider />
+        </ScrollReveal>
       </section>
 
       {/* Featured Projects Section */}
