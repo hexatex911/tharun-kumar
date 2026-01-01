@@ -22,7 +22,7 @@ export const WordPressProjectCard = ({ project, onClick, onKeyDown }: WordPressP
         <img
           src={project.images[0]}
           alt={`${project.title} preview`}
-          className="w-full h-full object-contain object-center bg-background transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
           loading="lazy"
           decoding="async"
         />

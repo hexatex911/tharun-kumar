@@ -31,7 +31,7 @@ export const ProjectCard = ({
           src={image}
           alt={title}
           loading="lazy"
-          className="w-full h-full object-contain object-center bg-background"
+          className="w-full h-full object-cover object-center"
         />
       </div>
       
