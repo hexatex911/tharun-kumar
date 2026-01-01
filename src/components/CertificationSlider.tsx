@@ -84,17 +84,18 @@ export const CertificationSlider = () => {
   }, []);
 
   return (
-    <>
-      <style jsx>{`
-        .hide-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .hide-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
-      <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
+    <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `
+      }} />
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-2">
@@ -136,6 +137,6 @@ export const CertificationSlider = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
