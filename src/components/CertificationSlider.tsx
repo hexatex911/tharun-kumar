@@ -39,11 +39,6 @@ const certifications = [
     alt: 'Professional Certification'
   },
   {
-    name: 'Google Cloud',
-    logo: '/images/certificates/images.jpg',
-    alt: 'Google Cloud Certification'
-  },
-  {
     name: 'Meta',
     logo: '/images/certificates/meta-logo-new.png',
     alt: 'Meta Certification'
@@ -153,7 +148,6 @@ export const CertificationSlider = () => {
                 // Special padding for specific logos
                 const getPadding = (certName: string) => {
                   if (certName === 'Infosys Springboard') return 'p-0.5'; // Zoom in more
-                  if (certName === 'Google Cloud') return 'p-0.5'; // Zoom in more
                   if (certName === 'Meta') return 'p-0.5'; // Zoom in more
                   return 'p-1'; // Default padding
                 };
