@@ -250,15 +250,15 @@ const projectDetails: Record<string, any> = {
   },
   jarvis: {
     title: 'JARVIS AI Assistant — Google Cloud Run Hackathon',
-    image: '/images/jarvis-1.png',
+    image: '/images/jarvis-4.png',
     gallery: [
       { src: '/images/jarvis-1.png', caption: 'JARVIS AI Assistant main interface', orientation: 'horizontal' },
       { src: '/images/jarvis-2.png', caption: 'Voice and text conversation modes', orientation: 'horizontal' },
       { src: '/images/jarvis-3.png', caption: 'Google Cloud integrations dashboard', orientation: 'horizontal' },
-      { src: '/images/jarvis-4.png', caption: 'Contact management and file handling', orientation: 'horizontal' },
+      { src: '/images/jarvis-4.png', caption: 'Contact management and file handling interface', orientation: 'horizontal' },
     ],
     videos: [
-      { youtubeId: '2jOhWb1g8oQ', title: 'JARVIS AI Assistant Demo', thumbnail: '/images/jarvis-1.png' },
+      { youtubeId: '2jOhWb1g8oQ', title: 'JARVIS AI Assistant Demo', thumbnail: '/images/jarvis-4.png' },
     ],
     summary: 'A JARVIS-inspired AI agent built for the Google Cloud Run Hackathon. An AI-powered offline conversational agent that switches seamlessly to online mode when connected, enabling cloud-powered capabilities.',
     role: 'Solo Developer — Google Cloud Run Hackathon Project',

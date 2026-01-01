@@ -64,7 +64,7 @@ const projects = [
       'Handle file attachments effortlessly',
       'Works offline with local intelligence, supercharged when online',
     ],
-    image: '/images/jarvis-1.png',
+    image: '/images/jarvis-4.png',
     videoUrl: 'https://www.youtube.com/watch?v=2jOhWb1g8oQ',
     category: ['All', 'AI', 'Cloud', 'Hackathon'],
   },
