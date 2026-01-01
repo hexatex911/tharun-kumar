@@ -12,6 +12,23 @@ import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const projects = [
   {
+    title: 'NeuroVision',
+    slug: 'neurovision',
+    description: 'AI-Powered Clinical Decision Support System for Early Alzheimer\'s Disease Detection Using Multi-Modal Biomarker Integration.',
+    role: 'AI/ML Engineer & Healthcare Tech Developer',
+    tech: ['Python', 'PyTorch', 'scikit-learn', 'Flask', 'Computer Vision', 'Medical AI'],
+    highlights: [
+      'Early Alzheimer\'s detection 3-5 years before clinical onset with 88% accuracy',
+      'Multi-modal approach: MRI, blood biomarkers, digital handwriting analysis',
+      'Explainable AI with Grad-CAM and SHAP for clinical transparency',
+      'Scalable for district and rural healthcare settings',
+    ],
+    image: '/images/neurovision/Screenshot 2026-01-01 071904.png',
+    liveUrl: 'https://neurovision-app.vercel.app/',
+    videoUrl: 'https://www.youtube.com/watch?v=TJJQR-iTExs',
+    category: ['All', 'AI', 'Healthcare', 'Research'],
+  },
+  {
     title: 'Talent Track',
     slug: 'talenttrack',
     description: 'AI-powered fitness analysis platform that turns any smartphone camera into a professional-grade workout evaluation system with no gym, no wearables, and no subscriptions.',
@@ -112,7 +129,7 @@ const projects = [
   },
 ];
 
-const filters = ['All', 'AI', 'Web', 'Research', 'Freelance', 'IoT', 'Cloud', 'Fitness', 'Agriculture', 'Hackathon', 'WordPress'];
+const filters = ['All', 'AI', 'Web', 'Research', 'Freelance', 'IoT', 'Cloud', 'Fitness', 'Agriculture', 'Hackathon', 'Healthcare', 'WordPress'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');

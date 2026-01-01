@@ -46,6 +46,63 @@ import insightiqAlerts from '@/assets/insightiq-alerts.png';
 import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greentech.png';
 
 const projectDetails: Record<string, any> = {
+  neurovision: {
+    title: 'NeuroVision — AI-Powered Alzheimer\'s Detection System',
+    image: '/images/neurovision/Screenshot 2026-01-01 071904.png',
+    gallery: [
+      { src: '/images/neurovision/Screenshot 2026-01-01 071904.png', caption: 'NeuroVision dashboard with multi-modal risk prediction', orientation: 'horizontal' },
+      { src: '/images/neurovision/Screenshot 2026-01-01 071921.png', caption: 'Clinical Decision Support System interface', orientation: 'horizontal' },
+      { src: '/images/neurovision/Screenshot 2026-01-01 071935.png', caption: 'MRI analysis with AI-powered detection', orientation: 'horizontal' },
+      { src: '/images/neurovision/Screenshot 2026-01-01 071959.png', caption: 'Blood biomarker integration and analysis', orientation: 'horizontal' },
+      { src: '/images/neurovision/Screenshot 2026-01-01 072024.png', caption: 'Digital handwriting analysis for early detection', orientation: 'horizontal' },
+      { src: '/images/neurovision/architecture.png', caption: 'System architecture overview', orientation: 'horizontal' },
+      { src: '/images/neurovision/ensemble model architecutre.jpg', caption: 'Ensemble model architecture with multi-modal fusion', orientation: 'horizontal' },
+      { src: '/images/neurovision/Flow diagram.jpg', caption: 'Clinical workflow and diagnostic pipeline', orientation: 'horizontal' },
+      { src: '/images/neurovision/gradcam.png', caption: 'Grad-CAM visualization for MRI interpretation', orientation: 'horizontal' },
+      { src: '/images/neurovision/MRI Analysis.png', caption: 'MRI analysis results with AI predictions', orientation: 'horizontal' },
+      { src: '/images/neurovision/Risk Prediction.png', caption: 'Risk prediction dashboard with confidence scores', orientation: 'horizontal' },
+    ],
+    videos: [
+      { youtubeId: 'TJJQR-iTExs', title: 'NeuroVision Demo - AI Alzheimer\'s Detection', thumbnail: '/images/neurovision/Screenshot 2026-01-01 071904.png' },
+    ],
+    summary: 'NeuroVision is an AI-powered Clinical Decision Support System for early Alzheimer\'s Disease detection using multi-modal biomarker integration. The system enables early detection 3-5 years before clinical onset with 88% accuracy, making it viable for district and rural healthcare settings.',
+    role: 'AI/ML Engineer & Healthcare Tech Developer — Full system design and implementation',
+    tech: ['Python', 'PyTorch', 'scikit-learn', 'Flask', 'Streamlit', 'Computer Vision', 'Medical AI', 'Explainable AI'],
+    problem: 'Alzheimer\'s Disease is increasingly recognized as a condition that can manifest much earlier than traditionally assumed. India faces a rapidly escalating Alzheimer\'s burden, compounded by delayed diagnosis, limited specialist access, and dependence on low-sensitivity cognitive screening tools. There\'s an urgent need for early, objective, and scalable diagnostic approaches.',
+    approach: `Built a comprehensive AI-powered Clinical Decision Support System with:
+• Stage 1 – Low-cost Primary Screening: Culturally adapted clinical assessments (MMSE, CDR) and digital handwriting analysis using tablet-based standardized writing tasks in native languages
+• Stage 2 – Biomarker & Imaging Augmentation: Blood biomarker testing (plasma Aβ42/40 ratio, p-tau181, neurofilament light chain) and structural MRI neuroimaging for high-risk cases
+• Hierarchical ensemble machine learning architecture:
+  - Random Forest models for blood biomarker patterns
+  - Convolutional Neural Networks (CNNs) for MRI neuroimaging
+  - Support Vector Machines (SVMs) for handwriting kinematics
+  - Gradient Boosting for clinical and demographic features
+• Meta-learner fusion with 5-fold cross-validation
+• Explainable AI integration with Grad-CAM for MRI visualization and SHAP for feature attribution
+• Open-source implementation with offline functionality for low-connectivity settings`,
+    challenges: [
+      'Integrating multiple data modalities (clinical, imaging, biomarkers, handwriting) into a cohesive system',
+      'Ensuring clinical interpretability and trust through explainable AI methods',
+      'Developing culturally adapted assessments for diverse Indian populations',
+      'Creating a cost-effective tiered approach to minimize unnecessary testing',
+      'Implementing offline functionality for low-resource healthcare settings',
+      'Achieving high accuracy while maintaining clinical usability',
+    ],
+    outcomes: [
+      'Early Alzheimer\'s detection 3-5 years before clinical onset with 88% accuracy',
+      'Scalable deployment suitable for district and rural healthcare settings',
+      'Empowers primary care physicians with explainable, confidence-based predictions',
+      'Reduces misdiagnosis and unnecessary referrals through tiered screening approach',
+      'Contributes to SDG 3 – Good Health and Well-Being',
+      'Lightweight prototype with web-based dashboard for practical demonstration',
+      'Published on Devpost: https://devpost.com/software/neurovision-54uxo6',
+    ],
+    links: [
+      { label: 'Live Demo', url: 'https://neurovision-app.vercel.app/' },
+      { label: 'YouTube Demo', url: 'https://www.youtube.com/watch?v=TJJQR-iTExs' },
+      { label: 'Devpost', url: 'https://devpost.com/software/neurovision-54uxo6' },
+    ],
+  },
   talenttrack: {
     title: 'Talent Track — AI-Powered Fitness Analysis Platform',
     image: talenttrackMock,
