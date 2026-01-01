@@ -54,38 +54,10 @@ const certifications = [
 ];
 
 export const CertificationSlider = () => {
-  const [isUserInteracting, setIsUserInteracting] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+  const [isPaused, setIsPaused] = useState(false);
 
   // Create duplicated array for seamless infinite scroll
   const duplicatedCertifications = [...certifications, ...certifications];
-
-  const handleUserInteraction = () => {
-    setIsUserInteracting(true);
-    
-    // Clear existing timeout
-    if (scrollTimeoutRef.current) {
-      clearTimeout(scrollTimeoutRef.current);
-    }
-    
-    // Resume auto-scroll after 3 seconds of no interaction
-    scrollTimeoutRef.current = setTimeout(() => {
-      setIsUserInteracting(false);
-    }, 3000);
-  };
-
-  const handleScroll = () => {
-    handleUserInteraction();
-  };
-
-  useEffect(() => {
-    return () => {
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current);
-      }
-    };
-  }, []);
 
   return (
     <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
@@ -116,13 +88,13 @@ export const CertificationSlider = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
           
           {/* Sliding container */}
-          <div 
-            ref={containerRef}
-            className="flex overflow-x-auto hide-scrollbar"
-            onTouchStart={handleUserInteraction}
-            onScroll={handleScroll}
-          >
-            <div className={`flex ${!isUserInteracting ? 'animate-scroll-x' : ''}`}>
+          <div className="flex overflow-hidden">
+            <div 
+              className="flex animate-scroll-x"
+              style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
               {duplicatedCertifications.map((cert, index) => {
                 // Special padding for specific logos
                 const getPadding = (certName: string) => {
