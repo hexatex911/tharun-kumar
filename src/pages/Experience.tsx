@@ -5,19 +5,6 @@ import { Briefcase, Calendar } from 'lucide-react';
 const experiences = [
   {
     year: '2025',
-    title: 'TalentTrack',
-    role: 'Technical Lead',
-    type: 'Project',
-    description: 'Led development of smartphone-based athlete assessment app for Smart India Hackathon.',
-    tech: ['Flutter', 'MediaPipe', 'OpenCV', 'Firebase'],
-    achievements: [
-      'Architected on-device pose estimation pipeline',
-      'Implemented gamification system with 100+ badges',
-      'Built para-athlete adaptive protocols',
-    ],
-  },
-  {
-    year: '2025',
     title: 'Numpty Neuron',
     role: 'WordPress & SEO Intern',
     type: 'Internship',
@@ -32,13 +19,14 @@ const experiences = [
   {
     year: '2025',
     title: 'Infosys Springboard Virtual Internship',
-    role: 'AI Intern (Shortlisted)',
+    role: 'AI Intern (Completed)',
     type: 'Internship',
-    description: 'Selected for competitive virtual internship program focused on AI and machine learning applications.',
+    description: 'Completed competitive virtual internship program focused on AI and machine learning applications.',
     tech: ['Python', 'ML', 'AI'],
     achievements: [
-      'Shortlisted from competitive applicant pool',
-      'Completed advanced AI coursework',
+      'Successfully completed from competitive applicant pool',
+      'Finished advanced AI coursework and projects',
+      'Gained hands-on experience in machine learning applications',
     ],
   },
   {
