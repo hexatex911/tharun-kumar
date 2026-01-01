@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -49,40 +49,53 @@ export const CertificationSlider = () => {
   const [isPaused, setIsPaused] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  // Create duplicated array for seamless infinite scroll
-  const duplicatedCertifications = [...certifications, ...certifications];
+  // Create tripled array for better infinite scroll
+  const tripleCertifications = [...certifications, ...certifications, ...certifications];
 
   const scrollLeft = () => {
     if (sliderRef.current) {
       const container = sliderRef.current;
-      const scrollAmount = 200;
+      const itemWidth = 200; // Approximate width including margins
+      const singleSetWidth = certifications.length * itemWidth;
       
-      // Check if we're at the beginning, if so jump to the end of first set
-      if (container.scrollLeft <= scrollAmount) {
-        const itemWidth = 200; // 48 (w-48) * 4 (1rem = 4px) + margins
-        const totalWidth = certifications.length * itemWidth;
-        container.scrollLeft = totalWidth;
-      }
+      // Always scroll left by one item
+      container.scrollBy({ left: -itemWidth, behavior: 'smooth' });
       
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      // Check if we need to reset position (when we're in the first set)
+      setTimeout(() => {
+        if (container.scrollLeft < itemWidth) {
+          container.scrollLeft = singleSetWidth + container.scrollLeft;
+        }
+      }, 300); // Wait for smooth scroll to complete
     }
   };
 
   const scrollRight = () => {
     if (sliderRef.current) {
       const container = sliderRef.current;
-      const scrollAmount = 200;
       const itemWidth = 200;
-      const totalWidth = certifications.length * itemWidth;
+      const singleSetWidth = certifications.length * itemWidth;
       
-      // Check if we're near the end, if so jump to the beginning of second set
-      if (container.scrollLeft >= totalWidth - scrollAmount) {
-        container.scrollLeft = 0;
-      }
+      // Always scroll right by one item
+      container.scrollBy({ left: itemWidth, behavior: 'smooth' });
       
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      // Check if we need to reset position (when we're in the third set)
+      setTimeout(() => {
+        if (container.scrollLeft > singleSetWidth * 2) {
+          container.scrollLeft = container.scrollLeft - singleSetWidth;
+        }
+      }, 300); // Wait for smooth scroll to complete
     }
   };
+
+  // Initialize scroll position to middle set for true infinite scroll
+  useEffect(() => {
+    if (sliderRef.current) {
+      const itemWidth = 200;
+      const singleSetWidth = certifications.length * itemWidth;
+      sliderRef.current.scrollLeft = singleSetWidth; // Start at middle set
+    }
+  }, []);
 
   return (
     <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
@@ -144,7 +157,7 @@ export const CertificationSlider = () => {
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >
-              {duplicatedCertifications.map((cert, index) => {
+              {tripleCertifications.map((cert, index) => {
                 // Special padding for specific logos
                 const getPadding = (certName: string) => {
                   if (certName === 'Infosys Springboard') return 'p-0.5'; // Zoom in more
