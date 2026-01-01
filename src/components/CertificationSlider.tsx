@@ -39,14 +39,14 @@ const certifications = [
     alt: 'Professional Certification'
   },
   {
-    name: 'Additional Certification 2',
-    logo: '/images/certificates/06bnqFCCqMYNmhahHfpuUFs-13.webp',
-    alt: 'Technical Certification'
-  },
-  {
     name: 'Google Cloud',
     logo: '/images/certificates/images.jpg',
     alt: 'Google Cloud Certification'
+  },
+  {
+    name: 'Meta',
+    logo: '/images/certificates/meta-logo-new.png',
+    alt: 'Meta Certification'
   },
 ];
 
@@ -59,13 +59,33 @@ export const CertificationSlider = () => {
 
   const scrollLeft = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+      const container = sliderRef.current;
+      const scrollAmount = 200;
+      
+      // Check if we're at the beginning, if so jump to the end of first set
+      if (container.scrollLeft <= scrollAmount) {
+        const itemWidth = 200; // 48 (w-48) * 4 (1rem = 4px) + margins
+        const totalWidth = certifications.length * itemWidth;
+        container.scrollLeft = totalWidth;
+      }
+      
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+      const container = sliderRef.current;
+      const scrollAmount = 200;
+      const itemWidth = 200;
+      const totalWidth = certifications.length * itemWidth;
+      
+      // Check if we're near the end, if so jump to the beginning of second set
+      if (container.scrollLeft >= totalWidth - scrollAmount) {
+        container.scrollLeft = 0;
+      }
+      
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
 
@@ -134,6 +154,7 @@ export const CertificationSlider = () => {
                 const getPadding = (certName: string) => {
                   if (certName === 'Infosys Springboard') return 'p-0.5'; // Zoom in more
                   if (certName === 'Google Cloud') return 'p-0.5'; // Zoom in more
+                  if (certName === 'Meta') return 'p-0.5'; // Zoom in more
                   return 'p-1'; // Default padding
                 };
                 
