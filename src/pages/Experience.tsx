@@ -5,15 +5,16 @@ import { Briefcase, Calendar } from 'lucide-react';
 const experiences = [
   {
     year: '2025',
-    title: 'Numpty Neuron',
-    role: 'WordPress & SEO Intern',
+    title: '1M1B (One Million for One Billion)',
+    role: 'AI + Sustainability Intern (Ongoing)',
     type: 'Internship',
-    description: 'Worked on WordPress site optimization, metadata configuration, and SEO improvements to enhance performance and ranking.',
-    tech: ['WordPress', 'SEO', 'Web Optimization'],
+    logo: '/images/experience/1m1b_logo.jpg',
+    description: 'Selected for AI + Sustainability Virtual Internship in collaboration with IBM SkillsBuild and AICTE. Currently completing guided learning path and working on AI-driven sustainability projects.',
+    tech: ['AI', 'Sustainability', 'IBM SkillsBuild', 'Machine Learning'],
     achievements: [
-      'Optimized WordPress sites for better performance',
-      'Implemented metadata configuration for improved SEO',
-      'Enhanced site rankings through technical SEO improvements',
+      'Shortlisted from competitive applicant pool',
+      'Completing IBM SkillsBuild guided learning path',
+      'Working on AI + Sustainability project implementations',
     ],
   },
   {
@@ -21,6 +22,7 @@ const experiences = [
     title: 'Infosys Springboard Virtual Internship',
     role: 'AI Intern (Completed)',
     type: 'Internship',
+    logo: '/images/experience/infosys spring.png',
     description: 'Completed competitive virtual internship program focused on AI and machine learning applications.',
     tech: ['Python', 'ML', 'AI'],
     achievements: [
@@ -30,10 +32,25 @@ const experiences = [
     ],
   },
   {
+    year: '2025',
+    title: 'Numpty Neuron',
+    role: 'WordPress & SEO Intern',
+    type: 'Internship',
+    logo: '/images/experience/numptyneuron_logo.jpg',
+    description: 'Worked on WordPress site optimization, metadata configuration, and SEO improvements to enhance performance and ranking.',
+    tech: ['WordPress', 'SEO', 'Web Optimization'],
+    achievements: [
+      'Optimized WordPress sites for better performance',
+      'Implemented metadata configuration for improved SEO',
+      'Enhanced site rankings through technical SEO improvements',
+    ],
+  },
+  {
     year: '2024',
     title: 'Rudhra Info Solutions',
     role: 'Web Developer Intern',
     type: 'Internship',
+    logo: '/images/experience/rudhra_info_solutions_logo.jpg',
     description: 'Developed FoodHopper, a food delivery platform with real-time order tracking.',
     tech: ['React', 'Node.js', 'MongoDB'],
     achievements: [
@@ -43,10 +60,25 @@ const experiences = [
     ],
   },
   {
+    year: '2023-Present',
+    title: 'IEEE TEMS',
+    role: 'Webmaster',
+    type: 'Community',
+    logo: '/images/experience/IEEE tems.jpg',
+    description: 'Managing and redesigning the IEEE TEMS chapter website.',
+    tech: ['Web Design', 'Content Management'],
+    achievements: [
+      'Complete website redesign',
+      'Improved member engagement',
+      'Event management system',
+    ],
+  },
+  {
     year: '2024',
     title: 'LocalBees',
     role: 'Web Developer',
     type: 'Freelance',
+    logo: '/images/experience/1723619164001.jpg',
     description: 'Created custom WordPress solutions for local business clients.',
     tech: ['WordPress', 'PHP', 'JavaScript'],
     achievements: [
@@ -66,19 +98,6 @@ const experiences = [
       'MitrahOrganics.com e-commerce build',
       'Custom WooCommerce integrations',
       'Client handover and training',
-    ],
-  },
-  {
-    year: '2023-Present',
-    title: 'IEEE TEMS',
-    role: 'Webmaster',
-    type: 'Community',
-    description: 'Managing and redesigning the IEEE TEMS chapter website.',
-    tech: ['Web Design', 'Content Management'],
-    achievements: [
-      'Complete website redesign',
-      'Improved member engagement',
-      'Event management system',
     ],
   },
   {
@@ -131,7 +150,15 @@ export default function Experience() {
                     <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <Briefcase className="h-5 w-5 text-accent flex-shrink-0" />
+                          {exp.logo ? (
+                            <img 
+                              src={exp.logo} 
+                              alt={`${exp.title} logo`}
+                              className="h-8 w-8 object-contain rounded"
+                            />
+                          ) : (
+                            <Briefcase className="h-5 w-5 text-accent flex-shrink-0" />
+                          )}
                           <h3 className="text-2xl font-heading font-bold">{exp.title}</h3>
                         </div>
                         <p className="text-lg text-muted-foreground mb-2">{exp.role}</p>
