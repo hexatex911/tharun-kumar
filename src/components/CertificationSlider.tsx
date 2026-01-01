@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 const certifications = [
   {
@@ -23,13 +23,18 @@ const certifications = [
   },
   {
     name: 'Infosys Springboard',
-    logo: '/images/certificates/springboard-logo.avif',
+    logo: '/images/certificates/infosys-springboard-new.png',
     alt: 'Infosys Springboard Certification'
   },
   {
     name: 'Udemy',
     logo: '/images/certificates/udemy-new-20212512.jpg',
     alt: 'Udemy Certification'
+  },
+  {
+    name: 'Meta',
+    logo: '/images/certificates/meta-logo.avif',
+    alt: 'Meta Certification'
   },
   {
     name: 'Additional Certification 1',
@@ -49,11 +54,47 @@ const certifications = [
 ];
 
 export const CertificationSlider = () => {
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout>();
+
   // Create duplicated array for seamless infinite scroll
   const duplicatedCertifications = [...certifications, ...certifications];
 
+  const handleUserInteraction = () => {
+    setIsUserInteracting(true);
+    
+    // Clear existing timeout
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+    
+    // Resume auto-scroll after 3 seconds of no interaction
+    scrollTimeoutRef.current = setTimeout(() => {
+      setIsUserInteracting(false);
+    }, 3000);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
+    <>
+      <style jsx>{`
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+      <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8">
           <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-2">
@@ -70,8 +111,14 @@ export const CertificationSlider = () => {
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
           
           {/* Sliding container */}
-          <div className="flex overflow-hidden">
-            <div className="flex animate-scroll-x">
+          <div 
+            ref={containerRef}
+            className="flex overflow-x-auto hide-scrollbar"
+            onMouseEnter={handleUserInteraction}
+            onTouchStart={handleUserInteraction}
+            onScroll={handleUserInteraction}
+          >
+            <div className={`flex ${!isUserInteracting ? 'animate-scroll-x' : ''}`}>
               {duplicatedCertifications.map((cert, index) => (
                 <div
                   key={`${cert.name}-${index}`}
@@ -89,6 +136,6 @@ export const CertificationSlider = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
