@@ -76,11 +76,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative flex items-center justify-center pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent" />
-        
+
         {/* Floating elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-accent/10 rounded-full blur-2xl animate-float" />
         <div className="absolute bottom-40 right-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Content */}
@@ -92,11 +92,11 @@ export default function Home() {
                 <span className="text-gradient">Web Developer | AI Engineer | Researcher</span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 lg:mb-8 leading-relaxed">
-                Passionate about crafting scalable digital systems. Currently interning at <span className="text-accent font-semibold">Infosys Springboard</span>, 
+                Passionate about crafting scalable digital systems. Currently interning at <span className="text-accent font-semibold">Infosys Springboard</span>,
                 focusing on cloud-native development and applied machine learning.
                 Experienced in modern web stacks including React, Next.js, and WordPress, with strong expertise in AI frameworks like TensorFlow, PyTorch, and LangChain.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 justify-center lg:justify-start">
                 <Link to="/projects" className="w-full sm:w-auto">
                   <Button size="lg" className="w-full sm:w-auto shadow-accent hover:shadow-xl transition-shadow">
@@ -105,7 +105,7 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-              
+
               <p className="text-xs sm:text-sm text-muted-foreground italic">
                 Available for internships, freelance projects, and research collaborations.
               </p>
@@ -122,7 +122,7 @@ export default function Home() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              
+
               {/* Floating decoration */}
               <div className="absolute -top-4 -right-4 w-20 sm:w-24 h-20 sm:h-24 bg-accent/20 rounded-full blur-3xl animate-pulse" />
               <div className="absolute -bottom-6 sm:-bottom-8 -left-6 sm:-left-8 w-24 sm:w-32 h-24 sm:h-32 bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -135,7 +135,7 @@ export default function Home() {
       <section className="py-12 sm:py-16 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal animation="fade-up">
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6">
               <StatCounter
                 end={19}
                 suffix="+"
@@ -154,10 +154,15 @@ export default function Home() {
                 description="IEEE SIGHT funding for aeroponics research"
               />
               <StatCounter
-                end={1400}
+                end={4}
+                label="Internships Completed"
+                description="Professional internships and work experience"
+              />
+              <StatCounter
+                end={30}
                 suffix="+"
-                label="LinkedIn Followers"
-                description="Growing professional network"
+                label="Events Won"
+                description="Hackathons, competitions, and awards"
               />
               <StatCounter
                 end={5}
@@ -183,8 +188,8 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             {featuredProjects.map((project, idx) => (
-              <ScrollReveal 
-                key={project.slug} 
+              <ScrollReveal
+                key={project.slug}
                 animation={idx % 2 === 0 ? 'slide-right' : 'slide-left'}
                 delay={idx * 100}
               >
@@ -227,14 +232,14 @@ export default function Home() {
                 'aquavolt': 'object-left-top',
                 'battleheal': 'object-[40%_top]',
               };
-              
+
               return (
-                <ScrollReveal 
-                  key={project.slug} 
+                <ScrollReveal
+                  key={project.slug}
                   animation="fade-up"
                   delay={idx * 100}
                 >
-                  <ResearchCard 
+                  <ResearchCard
                     title={project.title}
                     slug={project.slug}
                     category={project.category}
