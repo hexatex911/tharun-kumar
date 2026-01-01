@@ -80,7 +80,7 @@ export const CertificationSlider = () => {
                   <img
                     src={cert.logo}
                     alt={cert.alt}
-                    className="max-w-full max-h-full object-contain p-3 transition-all duration-300 group-hover:scale-105"
+                    className="max-w-full max-h-full object-contain p-1 transition-all duration-300 group-hover:scale-105"
                     loading="lazy"
                   />
                 </div>
