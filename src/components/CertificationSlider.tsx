@@ -34,11 +34,6 @@ const certifications = [
     alt: 'Udemy Certification'
   },
   {
-    name: 'Meta',
-    logo: '/images/certificates/meta-logo-new.png',
-    alt: 'Meta Certification'
-  },
-  {
     name: 'Additional Certification 1',
     logo: '/images/certificates/02yVL9f8Jw1atwoG6sgFZDH-7.webp',
     alt: 'Professional Certification'
@@ -102,19 +97,19 @@ export const CertificationSlider = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg border-blue-200 hover:border-blue-300"
             onClick={scrollLeft}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-4 w-4 text-blue-600" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg border-blue-200 hover:border-blue-300"
             onClick={scrollRight}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-4 w-4 text-blue-600" />
           </Button>
 
           {/* Gradient overlays for fade effect */}
