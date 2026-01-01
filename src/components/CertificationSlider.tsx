@@ -1,4 +1,6 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const certifications = [
   {
@@ -47,17 +49,30 @@ const certifications = [
     alt: 'Technical Certification'
   },
   {
-    name: 'Additional Certification 3',
+    name: 'Google Cloud',
     logo: '/images/certificates/images.jpg',
-    alt: 'Industry Certification'
-  }
+    alt: 'Google Cloud Certification'
+  },
 ];
 
 export const CertificationSlider = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const sliderRef = useRef<HTMLDivElement>(null);
 
   // Create duplicated array for seamless infinite scroll
   const duplicatedCertifications = [...certifications, ...certifications];
+
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className="w-full overflow-hidden bg-gradient-to-r from-secondary/30 via-background to-secondary/30 py-8">
@@ -83,6 +98,25 @@ export const CertificationSlider = () => {
         </div>
         
         <div className="relative">
+          {/* Navigation Buttons */}
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg"
+            onClick={scrollLeft}
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </Button>
+          
+          <Button
+            variant="outline"
+            size="icon"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white shadow-lg"
+            onClick={scrollRight}
+          >
+            <ChevronRight className="h-4 w-4" />
+          </Button>
+
           {/* Gradient overlays for fade effect */}
           <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
@@ -90,15 +124,21 @@ export const CertificationSlider = () => {
           {/* Sliding container */}
           <div className="flex overflow-hidden">
             <div 
-              className="flex animate-scroll-x"
-              style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
+              ref={sliderRef}
+              className="flex overflow-x-auto hide-scrollbar"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
+              <div 
+                className="flex animate-scroll-x"
+                style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
               {duplicatedCertifications.map((cert, index) => {
                 // Special padding for specific logos
                 const getPadding = (certName: string) => {
                   if (certName === 'Infosys Springboard') return 'p-0.5'; // Zoom in more
+                  if (certName === 'Google Cloud') return 'p-0.5'; // Zoom in more
                   return 'p-1'; // Default padding
                 };
                 
@@ -116,6 +156,7 @@ export const CertificationSlider = () => {
                   </div>
                 );
               })}
+              </div>
             </div>
           </div>
         </div>
