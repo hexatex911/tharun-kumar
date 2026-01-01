@@ -48,7 +48,7 @@ import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greent
 const projectDetails: Record<string, any> = {
   neurovision: {
     title: 'NeuroVision — AI-Powered Alzheimer\'s Detection System',
-    image: '/images/neurovision/Screenshot 2026-01-01 071904.png',
+    image: '/images/neurovision/thumbnail.jpg',
     gallery: [
       { src: '/images/neurovision/Screenshot 2026-01-01 071904.png', caption: 'NeuroVision dashboard with multi-modal risk prediction', orientation: 'horizontal' },
       { src: '/images/neurovision/Screenshot 2026-01-01 071921.png', caption: 'Clinical Decision Support System interface', orientation: 'horizontal' },
@@ -63,7 +63,7 @@ const projectDetails: Record<string, any> = {
       { src: '/images/neurovision/Risk Prediction.png', caption: 'Risk prediction dashboard with confidence scores', orientation: 'horizontal' },
     ],
     videos: [
-      { youtubeId: 'TJJQR-iTExs', title: 'NeuroVision Demo - AI Alzheimer\'s Detection', thumbnail: '/images/neurovision/Screenshot 2026-01-01 071904.png' },
+      { youtubeId: 'TJJQR-iTExs', title: 'NeuroVision Demo - AI Alzheimer\'s Detection', thumbnail: '/images/neurovision/thumbnail.jpg' },
     ],
     summary: 'NeuroVision is an AI-powered Clinical Decision Support System for early Alzheimer\'s Disease detection using multi-modal biomarker integration. The system enables early detection 3-5 years before clinical onset with 88% accuracy, making it viable for district and rural healthcare settings.',
     role: 'AI/ML Engineer & Healthcare Tech Developer — Full system design and implementation',

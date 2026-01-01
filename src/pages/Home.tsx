@@ -52,7 +52,7 @@ const featuredProjects = [
       'Multi-modal: MRI, biomarkers, handwriting analysis',
       'Explainable AI for clinical transparency',
     ],
-    image: '/images/neurovision/Screenshot 2026-01-01 071904.png',
+    image: '/images/neurovision/thumbnail.jpg',
     category: ['AI', 'Healthcare'],
   },
   {

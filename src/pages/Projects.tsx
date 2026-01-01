@@ -23,7 +23,7 @@ const projects = [
       'Explainable AI with Grad-CAM and SHAP for clinical transparency',
       'Scalable for district and rural healthcare settings',
     ],
-    image: '/images/neurovision/Screenshot 2026-01-01 071904.png',
+    image: '/images/neurovision/thumbnail.jpg',
     liveUrl: 'https://neurovision-app.vercel.app/',
     videoUrl: 'https://www.youtube.com/watch?v=TJJQR-iTExs',
     category: ['All', 'AI', 'Healthcare', 'Research'],
