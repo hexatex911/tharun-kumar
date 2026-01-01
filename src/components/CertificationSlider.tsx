@@ -33,7 +33,7 @@ const certifications = [
   },
   {
     name: 'Meta',
-    logo: '/images/certificates/meta-logo.avif',
+    logo: '/images/certificates/meta-logo-new.png',
     alt: 'Meta Certification'
   },
   {
@@ -73,6 +73,10 @@ export const CertificationSlider = () => {
     scrollTimeoutRef.current = setTimeout(() => {
       setIsUserInteracting(false);
     }, 3000);
+  };
+
+  const handleScroll = () => {
+    handleUserInteraction();
   };
 
   useEffect(() => {
@@ -115,24 +119,31 @@ export const CertificationSlider = () => {
           <div 
             ref={containerRef}
             className="flex overflow-x-auto hide-scrollbar"
-            onMouseEnter={handleUserInteraction}
             onTouchStart={handleUserInteraction}
-            onScroll={handleUserInteraction}
+            onScroll={handleScroll}
           >
             <div className={`flex ${!isUserInteracting ? 'animate-scroll-x' : ''}`}>
-              {duplicatedCertifications.map((cert, index) => (
-                <div
-                  key={`${cert.name}-${index}`}
-                  className="flex-shrink-0 w-48 h-24 mx-4 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-border/50 group"
-                >
-                  <img
-                    src={cert.logo}
-                    alt={cert.alt}
-                    className="max-w-full max-h-full object-contain p-1 transition-all duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+              {duplicatedCertifications.map((cert, index) => {
+                // Special padding for specific logos
+                const getPadding = (certName: string) => {
+                  if (certName === 'Infosys Springboard') return 'p-0.5'; // Zoom in more
+                  return 'p-1'; // Default padding
+                };
+                
+                return (
+                  <div
+                    key={`${cert.name}-${index}`}
+                    className="flex-shrink-0 w-48 h-24 mx-4 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border border-border/50 group"
+                  >
+                    <img
+                      src={cert.logo}
+                      alt={cert.alt}
+                      className={`max-w-full max-h-full object-contain ${getPadding(cert.name)} transition-all duration-300 group-hover:scale-105`}
+                      loading="lazy"
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
