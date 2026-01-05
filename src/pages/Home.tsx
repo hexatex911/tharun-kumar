@@ -5,6 +5,7 @@ import { ProjectCard } from '@/components/ProjectCard';
 import { ResearchCard } from '@/components/ResearchCard';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { CertificationSlider } from '@/components/CertificationSlider';
+import { TypewriterText } from '@/components/TypewriterText';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import { innovationProjects } from '@/data/researchProjects';
 import profileProfessional from '@/assets/profile-professional.png';
@@ -89,8 +90,13 @@ export default function Home() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-4 lg:mb-6 leading-tight">
                 Tharun Kumar C
               </h1>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-semibold mb-4 lg:mb-6 leading-tight">
-                <span className="text-gradient">Web Developer | AI Engineer | Researcher</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-semibold mb-4 lg:mb-6 leading-tight min-h-[3rem] sm:min-h-[4rem]">
+                <TypewriterText 
+                  texts={['Web Developer', 'AI Engineer', 'Researcher']}
+                  typingSpeed={80}
+                  deletingSpeed={40}
+                  pauseDuration={1500}
+                />
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 lg:mb-8 leading-relaxed">
                 Passionate about crafting scalable digital systems. Currently interning at <span className="text-accent font-semibold">Infosys Springboard</span>,
