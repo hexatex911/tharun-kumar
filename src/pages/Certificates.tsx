@@ -64,6 +64,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://drive.google.com/file/d/1U3lcMVcZKAwzRNTXHzyBr9-1Zhak23Ak/view?usp=sharing',
     skills: ['Digital Marketing', 'E-commerce', 'Marketing Strategy'],
   },
+  {
+    title: 'WordPress with Docker',
+    issuer: 'Great Learning',
+    issuerLogo: '/images/certlogos/great-learning-cert-logo.png',
+    issuedDate: '2024',
+    credentialUrl: 'https://drive.google.com/file/d/1YfNDBpxGOKpb6-bUODZvnCX3FprWIjGF/view',
+    skills: ['WordPress', 'Docker', 'DevOps'],
+  },
 ];
 
 export default function Certificates() {
