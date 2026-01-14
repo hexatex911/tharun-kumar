@@ -91,7 +91,7 @@ export default function Home() {
                 Tharun Kumar C
               </h1>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-semibold mb-4 lg:mb-6 leading-tight min-h-[3rem] sm:min-h-[4rem]">
-                <TypewriterText 
+                <TypewriterText
                   texts={['Web Developer', 'AI Engineer', 'Researcher']}
                   typingSpeed={80}
                   deletingSpeed={40}

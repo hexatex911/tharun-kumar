@@ -43,6 +43,11 @@ const certifications = [
     logo: '/images/certificates/meta-logo-new.png',
     alt: 'Meta Certification'
   },
+  {
+    name: 'NPTEL',
+    logo: '/images/certificates/nptel-logo.png',
+    alt: 'NPTEL Certification'
+  },
 ];
 
 export const CertificationSlider = () => {
