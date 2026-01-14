@@ -48,6 +48,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://drive.google.com/file/d/15bZXtkVrih89baJ3X6ha_CAyBUVec7uO/view?usp=sharing',
     skills: ['Cloud Computing', 'Distributed Systems'],
   },
+  {
+    title: 'Agile Requirements Foundations',
+    issuer: 'LinkedIn',
+    issuerLogo: '/images/certlogos/linkedin-cert-logo.avif',
+    issuedDate: 'Aug 2023',
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/22fecb7bb0444c858815b5f206c09ff213f3fe57d394ff2a923cc11c028a4d70',
+    skills: ['Agile', 'Requirements Engineering'],
+  },
 ];
 
 export default function Certificates() {
