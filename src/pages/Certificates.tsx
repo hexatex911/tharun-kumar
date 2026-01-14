@@ -72,6 +72,15 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://drive.google.com/file/d/1YfNDBpxGOKpb6-bUODZvnCX3FprWIjGF/view',
     skills: ['WordPress', 'Docker', 'DevOps'],
   },
+  {
+    title: 'Collaborating with G Suite Apps',
+    issuer: 'Coursera',
+    issuerLogo: '/images/certlogos/coursera-cert-logo.png',
+    issuedDate: 'Aug 2023',
+    credentialId: 'G9ENWMTSACUF',
+    credentialUrl: 'https://drive.google.com/file/d/1fWJfeCf7-2sCFixqwS9nk4wVZD3/view?usp=sharing',
+    skills: ['G Suite', 'Collaboration', 'Productivity'],
+  },
 ];
 
 export default function Certificates() {
