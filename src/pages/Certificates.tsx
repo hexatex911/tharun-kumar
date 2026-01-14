@@ -24,6 +24,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_6964420c4b3bff447afe7854_1768178832005_completion_certificate.pdf',
     skills: ['Data Analytics', 'Business Intelligence', 'Data Visualization'],
   },
+  {
+    title: 'Deep Learning for Developers',
+    issuer: 'Infosys Springboard',
+    issuerLogo: '/images/certlogos/infosys-cert-logo.png',
+    issuedDate: 'Jun 2025',
+    credentialUrl: 'https://drive.google.com/file/d/14TA3fAn5jJ-Sr0daRRowoTYVu7SChYE6/view',
+    skills: ['Deep Learning', 'Neural Networks', 'AI/ML'],
+  },
 ];
 
 export default function Certificates() {
