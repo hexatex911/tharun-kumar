@@ -32,6 +32,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://drive.google.com/file/d/14TA3fAn5jJ-Sr0daRRowoTYVu7SChYE6/view',
     skills: ['Deep Learning', 'Neural Networks', 'AI/ML'],
   },
+  {
+    title: 'Career Essentials in Generative AI by Microsoft and LinkedIn',
+    issuer: 'Microsoft',
+    issuerLogo: '/images/certlogos/microsoft-cert-logo.png',
+    issuedDate: 'Aug 2023',
+    credentialUrl: 'https://www.linkedin.com/learning/certificates/fd9e29d2da1ec4d43a27f2163e60cab4715ad5259ec5d1c6bcd186d043cd80cb',
+    skills: ['Generative AI'],
+  },
 ];
 
 export default function Certificates() {
