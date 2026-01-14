@@ -56,6 +56,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://www.linkedin.com/learning/certificates/22fecb7bb0444c858815b5f206c09ff213f3fe57d394ff2a923cc11c028a4d70',
     skills: ['Agile', 'Requirements Engineering'],
   },
+  {
+    title: 'Foundations of Digital Marketing and E-commerce',
+    issuer: 'Google (via Coursera)',
+    issuerLogo: '/images/certlogos/google-cert-logo.png',
+    issuedDate: '2024',
+    credentialUrl: 'https://drive.google.com/file/d/1U3lcMVcZKAwzRNTXHzyBr9-1Zhak23Ak/view?usp=sharing',
+    skills: ['Digital Marketing', 'E-commerce', 'Marketing Strategy'],
+  },
 ];
 
 export default function Certificates() {
