@@ -40,6 +40,14 @@ const certificates: Certificate[] = [
     credentialUrl: 'https://www.linkedin.com/learning/certificates/fd9e29d2da1ec4d43a27f2163e60cab4715ad5259ec5d1c6bcd186d043cd80cb',
     skills: ['Generative AI'],
   },
+  {
+    title: 'Cloud Computing',
+    issuer: 'NPTEL',
+    issuerLogo: '/images/certlogos/nptel-cert-logo.jpg',
+    issuedDate: '2024',
+    credentialUrl: 'https://drive.google.com/file/d/15bZXtkVrih89baJ3X6ha_CAyBUVec7uO/view?usp=sharing',
+    skills: ['Cloud Computing', 'Distributed Systems'],
+  },
 ];
 
 export default function Certificates() {
