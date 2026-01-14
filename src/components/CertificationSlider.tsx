@@ -48,6 +48,11 @@ const certifications = [
     logo: '/images/certificates/nptel-logo.png',
     alt: 'NPTEL Certification'
   },
+  {
+    name: 'Deloitte',
+    logo: '/images/certificates/deloitte-logo.png',
+    alt: 'Deloitte Certification'
+  },
 ];
 
 export const CertificationSlider = () => {
