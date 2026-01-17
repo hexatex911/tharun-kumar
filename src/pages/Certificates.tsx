@@ -16,6 +16,14 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
+    title: 'What is Metaverse',
+    issuer: 'Meta',
+    issuerLogo: '/images/certlogos/meta-cert-logo.jpg',
+    issuedDate: 'Jan 2026',
+    credentialUrl: 'https://drive.google.com/file/d/1BWSTCRqEkYUJlJXo3I0WRL5sWSWhey9d/view?usp=sharing',
+    skills: ['Metaverse', 'Virtual Reality', 'Digital Innovation', 'Emerging Technologies'],
+  },
+  {
     title: 'Go for Gold Contest - Gold Level Achievement',
     issuer: 'Accenture iAspire',
     issuerLogo: '/images/certlogos/accenture-cert-logo.png',

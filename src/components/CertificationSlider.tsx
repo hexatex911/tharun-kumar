@@ -29,9 +29,9 @@ const certifications = [
     alt: 'Infosys Springboard Certification'
   },
   {
-    name: 'Udemy',
-    logo: '/images/certificates/udemy-new-20212512.jpg',
-    alt: 'Udemy Certification'
+    name: 'Accenture',
+    logo: '/images/certificates/accenture-logo.png',
+    alt: 'Accenture Certification'
   },
   {
     name: 'Additional Certification 1',
