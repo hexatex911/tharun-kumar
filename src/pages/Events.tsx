@@ -100,6 +100,15 @@ const events2025: Event[] = [
     details: 'Presented Talent Track AI-powered fitness analysis platform; evaluated on innovation and impact.',
     photos: ['/images/events/58b1d4f8-6261-42b9-b674-a7d481a5a1e3.jpg', '/images/events/steganos-certificate.png'],
   },
+  {
+    date: '2025',
+    title: 'Orion Hackathon – AI Healthcare Challenge',
+    institution: 'Madras Medical College (MMC)',
+    project: 'NeuroVision',
+    achievement: 'Special Mention',
+    details: 'AI-powered clinical decision support system for early Alzheimer\'s disease detection received special recognition for addressing critical healthcare challenges.',
+    photos: ['/images/events/1767315914347.jpg', '/images/events/Screenshot 2026-01-01 071959.png'],
+  },
 ];
 
 const grants: Grant[] = [
@@ -130,6 +139,9 @@ const getAchievementColor = (achievement: string) => {
   }
   if (achievement.toLowerCase().includes('third') || achievement.toLowerCase().includes('3rd')) {
     return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
+  }
+  if (achievement.toLowerCase().includes('special mention')) {
+    return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
   }
   return 'bg-accent/20 text-accent border-accent/30';
 };

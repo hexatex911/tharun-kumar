@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import { Menu, X, Moon, Sun, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ResumeModal } from '@/components/ResumeModal';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
   const location = useLocation();
 
@@ -67,6 +69,15 @@ export const Header = () => {
               </Link>
             ))}
             <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsResumeModalOpen(true)}
+              className="ml-2"
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              Resume
+            </Button>
+            <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
@@ -115,9 +126,25 @@ export const Header = () => {
                 {label}
               </Link>
             ))}
+            <button
+              onClick={() => {
+                setIsResumeModalOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-sm font-medium transition-all duration-300 hover:text-accent hover:translate-x-2 py-2 px-3 rounded text-foreground/80 flex items-center gap-2 w-full text-left"
+            >
+              <FileText className="h-4 w-4" />
+              Resume
+            </button>
           </nav>
         )}
       </div>
+
+      {/* Resume Modal */}
+      <ResumeModal 
+        isOpen={isResumeModalOpen} 
+        onClose={() => setIsResumeModalOpen(false)} 
+      />
     </header>
   );
 };

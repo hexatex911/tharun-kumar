@@ -16,6 +16,14 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
+    title: 'Go for Gold Contest - Gold Level Achievement',
+    issuer: 'Accenture iAspire',
+    issuerLogo: '/images/certlogos/accenture-cert-logo.png',
+    issuedDate: 'Dec 2025',
+    credentialUrl: 'https://drive.google.com/file/d/1SeSV3naU-LRKPLC5REjexIa9vOg4ATZp/view?usp=sharing',
+    skills: ['Problem Solving', 'Technical Excellence', 'Innovation'],
+  },
+  {
     title: 'Deloitte Australia - Data Analytics Job Simulation',
     issuer: 'Deloitte',
     issuerLogo: '/images/certlogos/deloitte cert logo.jpg',
