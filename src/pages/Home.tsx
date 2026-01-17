@@ -99,9 +99,9 @@ export default function Home() {
                 />
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground mb-6 lg:mb-8 leading-relaxed">
-                Passionate about crafting scalable digital systems. Currently interning at <span className="text-accent font-semibold">Infosys Springboard</span>,
-                focusing on cloud-native development and applied machine learning.
-                Experienced in modern web stacks including React, Next.js, and WordPress, with strong expertise in AI frameworks like TensorFlow, PyTorch, and LangChain.
+                Passionate about crafting scalable digital systems and AI-powered solutions. Currently interning at <span className="text-accent font-semibold">1M1B</span>,
+                focusing on cloud-native development and applied machine learning. Experienced in modern web stacks and AI frameworks with a track record of 
+                winning competitions and securing research funding for innovative projects.
               </p>
 
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 justify-center lg:justify-start">
@@ -144,7 +144,7 @@ export default function Home() {
           <ScrollReveal animation="fade-up">
             <div className="grid grid-cols-2 lg:grid-cols-6 gap-4 sm:gap-6">
               <StatCounter
-                end={19}
+                end={25}
                 suffix="+"
                 label="Certifications"
                 description="Infosys Springboard certifications & professional courses"
@@ -166,13 +166,13 @@ export default function Home() {
                 description="Professional internships and work experience"
               />
               <StatCounter
-                end={30}
+                end={10}
                 suffix="+"
-                label="Events Won"
-                description="Hackathons, competitions, and awards"
+                label="Competition Wins"
+                description="First place wins in hackathons and competitions"
               />
               <StatCounter
-                end={5}
+                end={8}
                 label="Publications"
                 description="Research papers and technical publications"
               />

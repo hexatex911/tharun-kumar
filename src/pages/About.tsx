@@ -18,7 +18,9 @@ const certifications = [
   'AI, Business, and the Future of Work (Lund University, Coursera)',
   'WordPress Development (LinkedIn Learning)',
   'Generative AI Learning Paths (Microsoft LinkedIn)',
-  '19+ Infosys Springboard Certifications',
+  '25+ Infosys Springboard Certifications',
+  'IEEE TEMS Volunteer Excellence Award',
+  'Multiple competition certificates and achievements',
 ];
 
 export default function About() {
@@ -60,9 +62,10 @@ export default function About() {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     I'm a pre-final year student pursuing Computer Science and Business Systems. 
                     I build cross-platform apps (Flutter), web apps (React, Next.js), and applied AI 
-                    systems (MediaPipe/OpenCV, LLMs). I publish research and collaborate with IEEE and 
-                    college research groups. My work spans from sports tech (TalentTrack) to sustainable 
-                    agriculture (vertical farming patent) to cultural preservation (Indicraft marketplace).
+                    systems (MediaPipe/OpenCV, LLMs). Recent achievements include winning 1st place at multiple competitions 
+                    (Gojan Business Pitch, IET App Development, AIRO 3.0), securing 2nd place at Steganos'25 with Talent Track, 
+                    and receiving IEEE SIGHT funding for sustainable agriculture research. I publish research and collaborate 
+                    with IEEE and college research groups.
                   </p>
                 </div>
                 <div className="order-first md:order-last flex items-center justify-center">
@@ -86,23 +89,27 @@ export default function About() {
                   <ul className="space-y-2 text-muted-foreground leading-relaxed">
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      <span>School Pupil Leader at Immanuel MHSS — coordinated events and represented the school</span>
+                      <span>Multiple 1st place wins: Gojan Business Pitch (InSight IQ), IET App Development, AIRO 3.0 Web Development</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      <span>IEEE TEMS Webmaster and website coordinator</span>
+                      <span>2nd place at Steganos'25 Idea Pitching with Talent Track AI fitness platform</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      <span>Team Lead for all presented projects</span>
+                      <span>Runner-up at UNSCRIPTED'25 Paper Presentation (EEE Department)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      <span>Winner of web designing competition organized by SRM</span>
+                      <span>IEEE TEMS Volunteer Excellence Award recipient and Webmaster</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-accent mt-1">•</span>
-                      <span>Youth Red Cross (YRC) member</span>
+                      <span>Winner of Mine Your Ideas competition with RATSAFE project</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent mt-1">•</span>
+                      <span>School Pupil Leader at Immanuel MHSS and Youth Red Cross (YRC) member</span>
                     </li>
                   </ul>
                 </div>
@@ -121,6 +128,7 @@ export default function About() {
                       I run online tutoring sessions, teaching HTML/CSS/WordPress and practical 
                       business-analytics workshops to learners in India and abroad. I also host the podcast 
                       "Just Relax Machi" where I discuss tech, career, and life with fellow developers and students.
+                      Recently presented at multiple competitions including technical paper presentations and business pitches.
                     </p>
                   </div>
                 </div>

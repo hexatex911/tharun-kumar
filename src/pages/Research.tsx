@@ -6,13 +6,33 @@ import { FileText, Award, ExternalLink, Lightbulb, Trophy } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ResearchPDFDialog } from '@/components/ResearchPDFDialog';
 
+interface Publication {
+  title: string;
+  conference: string;
+  summary: string;
+  year: string;
+  date?: string;
+  pdfUrl?: string;
+  researchGateUrl?: string;
+  content?: React.ReactNode;
+}
+
 const publications = [
   {
-    title: 'Optimizing the Quantum Circuit of Quantum K-Nearest Neighbors (QKNN) Using Quantum Natural Gradient Descent',
-    conference: 'ICCTDC 2025',
-    summary: 'Research on optimizing quantum machine learning circuits using gradient descent techniques.',
+    title: 'Optimizing the Quantum Circuit of Quantum SVM Using Hybrid Quantum Natural Gradient Descent and Quantum Butterfly Optimization Algorithm',
+    conference: 'Scopus Indexed Conference Proceedings',
+    summary: 'Novel hybrid approach combining QNGD with QBOA for optimizing quantum support vector machine circuits with enhanced performance.',
     year: '2025',
-    pdfUrl: '/documents/qknn-optimization.pdf',
+    date: 'Jul 19, 2025',
+    researchGateUrl: 'https://www.researchgate.net/publication/397273972_Optimizing_the_Quantum_Circuit_of_Quantum_SVM_Using_Hybrid_Quantum_Natural_Gradient_DescentQNGD_and_Quantum_Butterfly_Optimization_AlgorithmQBOA',
+  },
+  {
+    title: 'Optimizing the Quantum Circuit of Quantum K-Nearest Neighbors Using Hybrid Gradient Descent and Golden Eagle Optimization Algorithm',
+    conference: 'Scopus Indexed Conference Proceedings',
+    summary: 'Research on optimizing quantum machine learning circuits using hybrid gradient descent and nature-inspired optimization techniques.',
+    year: '2025',
+    date: 'Jul 9, 2025',
+    researchGateUrl: 'https://www.researchgate.net/publication/395752038_Optimizing_the_Quantum_Circuit_of_Quantum_K-Nearest_Neighbors_QKNN_Using_Hybrid_Gradient_Descent_and_Golden_Eagle_Optimization_Algorithm',
     content: (
       <>
         <h3>Overview</h3>
@@ -35,11 +55,12 @@ const publications = [
     ),
   },
   {
-    title: 'Optimizing QSVM Circuits using QNGD & WOA',
-    conference: 'INCET 2025',
+    title: 'Optimizing Quantum Support Vector Machine Circuits Using Hybrid Quantum Natural Gradient Descent and Whale Optimization Algorithm',
+    conference: 'Scopus Indexed Conference Proceedings',
     summary: 'Novel approach to quantum support vector machine optimization combining gradient descent and whale optimization.',
     year: '2025',
-    pdfUrl: '/documents/qsvm-optimization.pdf',
+    date: 'May 10, 2025',
+    researchGateUrl: 'https://www.researchgate.net/publication/395290765_Optimizing_Quantum_Support_Vector_Machine_QSVM_Circuits_Using_Hybrid_Quantum_Natural_Gradient_Descent_QNGD_and_Whale_Optimization_Algorithm_WOA',
     content: (
       <>
         <h3>Overview</h3>
@@ -62,11 +83,20 @@ const publications = [
     ),
   },
   {
-    title: 'Hybrid K-Means and Firefly Algorithm for Healthcare',
-    conference: 'ICoACT 2025',
+    title: 'Hybrid Gradient Descent and Sea Lion Optimization Algorithm to Optimize Task Scheduling in Fog Computing Environment',
+    conference: 'Scopus Indexed Conference Proceedings',
+    summary: 'Hybrid optimization approach for efficient task scheduling in fog computing environments using bio-inspired algorithms.',
+    year: '2025',
+    date: 'Mar 10, 2025',
+    researchGateUrl: 'https://www.researchgate.net/publication/391998306_Hybrid_Gradient_Descent_and_Sea_Lion_Optimization_Algorithm_H-GD-SLnO_to_Optimize_Task_Scheduling_in_Fog_Computing_Environment',
+  },
+  {
+    title: 'Hybrid K-Means and Firefly Algorithm-Based Load Balancer for Dynamic Task Scheduling in Fog Computing for Postoperative Healthcare Systems',
+    conference: 'Scopus Indexed Conference Proceedings',
     summary: 'Dynamic load balancing approach for fog computing in postoperative healthcare monitoring systems.',
     year: '2025',
-    pdfUrl: '/documents/fog-computing-healthcare.pdf',
+    date: 'Mar 8, 2025',
+    researchGateUrl: 'https://www.researchgate.net/publication/391998548_Hybrid_K-Means_and_Firefly_Algorithm-Based_Load_Balancer_for_Dynamic_Task_Scheduling_in_Fog_Computing_for_Postoperative_Healthcare_Systems',
     content: (
       <>
         <h3>Overview</h3>
@@ -92,16 +122,20 @@ const publications = [
     ),
   },
   {
-    title: 'HOFL-CS-FDA for Cloud Load Balancing',
-    conference: 'ACOIT 2024',
-    summary: 'Hybrid optimization framework for efficient cloud resource allocation and load distribution.',
-    year: '2024',
-  },
-  {
-    title: 'Hybrid Fuzzy C-Means + ACO for FANETs',
-    conference: 'ICACRS 2024',
+    title: 'Hybrid Fuzzy C-Means and Ant Colony Optimized Clustering Approach for Efficient Routing in Flying Ad-Hoc Networks (FANETs)',
+    conference: 'IEEE Conference Proceedings',
     summary: 'Clustering algorithm combining fuzzy logic and ant colony optimization for flying ad-hoc networks.',
     year: '2024',
+    date: 'Dec 13, 2024',
+    researchGateUrl: 'https://www.researchgate.net/publication/388131384_Hybrid_Fuzzy_C-Means_and_Ant_Colony_Optimized_ACO_Clustering_Approach_for_Efficient_Routing_in_Flying_Ad-Hoc_Networks_FANETs',
+  },
+  {
+    title: 'An Optimization Method for Cloud Load Balancing using Hybrid Oppositional Forgetting Learning based Crow Search and Fractional Dragonfly Algorithms',
+    conference: 'IEEE Conference Proceedings',
+    summary: 'Hybrid optimization framework for efficient cloud resource allocation and load distribution.',
+    year: '2024',
+    date: 'Sep 10, 2024',
+    researchGateUrl: 'https://www.researchgate.net/publication/390449307_An_optimization_Method_for_Cloud_Load_Balancing_using_a_Hybrid_Oppositional_Forgetting_Learning_OFL_based_Crow_Search_Algorithm_and_Fractional_Dragonfly_Algorithms_HOFL-CS-FDA',
   },
 ];
 
@@ -418,20 +452,22 @@ export default function Research() {
                       <p className="text-muted-foreground text-sm mb-4 break-words">
                         {pub.summary}
                       </p>
-                      {pub.pdfUrl && pub.content ? (
+                      {pub.researchGateUrl ? (
                         <Button 
-                          variant="ghost" 
+                          variant="outline" 
                           size="sm"
-                          onClick={() => handleViewMore(pub.title, pub.pdfUrl!, pub.content!)}
-                          className="w-full sm:w-auto"
+                          asChild
+                          className="flex-shrink-0"
                         >
-                          <FileText className="mr-2 h-4 w-4" />
-                          View More
+                          <a href={pub.researchGateUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            ResearchGate
+                          </a>
                         </Button>
                       ) : (
-                        <Button variant="ghost" size="sm" disabled className="w-full sm:w-auto">
+                        <Button variant="ghost" size="sm" disabled className="flex-shrink-0">
                           <FileText className="mr-2 h-4 w-4" />
-                          Download Paper (Coming Soon)
+                          Coming Soon
                         </Button>
                       )}
                     </div>
