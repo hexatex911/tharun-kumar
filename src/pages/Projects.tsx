@@ -12,6 +12,22 @@ import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const projects = [
   {
+    title: 'ScamShield',
+    slug: 'scamshield',
+    description: 'Fraud detection system analyzing 7.4M banking transactions across 40,000+ accounts for the Reserve Bank Innovation Hub National Fraud Prevention Challenge.',
+    role: 'Data Scientist & ML Engineer — Fraud Analytics & Pattern Detection',
+    tech: ['Python', 'Data Science', 'Machine Learning', 'Pandas', 'NumPy', 'Fraud Detection'],
+    highlights: [
+      'Analyzed 7.4 million real banking transactions',
+      'Fraud Lifecycle State Machine for pattern detection',
+      'Behavioral signals: ATM frequency, cash-out patterns',
+      'Short-window mule activity detection (1-2 weeks)',
+      'Foundation for explainable ML implementation',
+    ],
+    image: '/images/scamshield/thumbnail.png',
+    category: ['All', 'AI', 'FinTech', 'Research'],
+  },
+  {
     title: 'NeuroVision',
     slug: 'neurovision',
     description: 'AI-Powered Clinical Decision Support System for Early Alzheimer\'s Disease Detection Using Multi-Modal Biomarker Integration.',
@@ -129,7 +145,7 @@ const projects = [
   },
 ];
 
-const filters = ['All', 'AI', 'Web', 'Research', 'Freelance', 'IoT', 'Cloud', 'Fitness', 'Agriculture', 'Hackathon', 'Healthcare', 'WordPress'];
+const filters = ['All', 'AI', 'Web', 'Research', 'FinTech', 'Freelance', 'IoT', 'Cloud', 'Fitness', 'Agriculture', 'Hackathon', 'Healthcare', 'WordPress'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
