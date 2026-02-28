@@ -46,6 +46,50 @@ import insightiqAlerts from '@/assets/insightiq-alerts.png';
 import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greentech.png';
 
 const projectDetails: Record<string, any> = {
+  scamshield: {
+    title: 'ScamShield — Fraud Detection & Prevention System',
+    image: '/images/scamshield/thumbnail.png',
+    gallery: [
+      { src: '/images/scamshield/1.png', caption: 'ScamShield dashboard overview', orientation: 'horizontal' },
+      { src: '/images/scamshield/2.png', caption: 'Fraud Lifecycle State Machine visualization', orientation: 'horizontal' },
+      { src: '/images/scamshield/3.png', caption: 'Transaction pattern analysis', orientation: 'horizontal' },
+      { src: '/images/scamshield/4.png', caption: 'Behavioral signals and anomaly detection', orientation: 'horizontal' },
+      { src: '/images/scamshield/5.png', caption: 'ATM withdrawal frequency analysis', orientation: 'horizontal' },
+      { src: '/images/scamshield/6.png', caption: 'Cash-out pattern detection', orientation: 'horizontal' },
+    ],
+    summary: 'ScamShield is a fraud detection system built for the Reserve Bank Innovation Hub (RBIH) National Fraud Prevention Challenge. Analyzed 7.4 million real banking transactions across 40,000+ accounts to identify mule activity and fraud patterns.',
+    role: 'Data Scientist & ML Engineer — Fraud Analytics & Pattern Detection',
+    tech: ['Python', 'Data Science', 'Machine Learning', 'Pandas', 'NumPy', 'Scikit-learn', 'Fraud Detection'],
+    problem: 'Traditional fraud detection systems rely on monthly checks that miss short-window mule activity. Most fraud-linked accounts operate within 1-2 weeks, making them invisible to conventional monitoring. Banks need real-time, explainable fraud detection that can identify behavioral patterns before significant losses occur.',
+    approach: `Built a comprehensive fraud detection system with:
+• Analyzed 7.4 million real banking transactions across 40,000+ accounts
+• Developed Fraud Lifecycle State Machine to track account progression from inactive → active → cash-out
+• Identified behavioral signals:
+  - ATM withdrawal frequency patterns
+  - Multiple source deposits followed by rapid cash-outs
+  - Short-window activity (1-2 weeks) indicating mule behavior
+• Pattern recognition instead of single-event detection
+• Foundation for explainable machine learning in Phase 2
+• Clear operational insights that banks and regulators can understand and act on`,
+    challenges: [
+      'Processing and analyzing 7.4 million transactions efficiently',
+      'Identifying fraud as a process rather than isolated events',
+      'Detecting short-window mule activity (1-2 weeks) missed by monthly checks',
+      'Building explainable patterns that regulators can understand',
+      'Distinguishing legitimate behavior from fraud patterns',
+      'Creating actionable insights for real-time fraud prevention',
+    ],
+    outcomes: [
+      'Successfully analyzed 7.4M transactions across 40,000+ accounts',
+      'Developed Fraud Lifecycle State Machine for pattern detection',
+      'Identified key behavioral signals: ATM frequency, cash-out patterns',
+      'Built foundation for Phase 2 explainable ML implementation',
+      'Created clear operational insights for banks and regulators',
+      'Demonstrated fraud detection as a process, not single events',
+      'Contributed to RBI Innovation Hub National Fraud Prevention Challenge',
+    ],
+    links: [],
+  },
   neurovision: {
     title: 'NeuroVision — AI-Powered Alzheimer\'s Detection System',
     image: '/images/neurovision/thumbnail.jpg',

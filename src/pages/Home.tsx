@@ -15,6 +15,20 @@ import insightiqMock from '@/assets/insightiq-dashboard.png';
 
 const featuredProjects = [
   {
+    title: 'ScamShield',
+    slug: 'scamshield',
+    description: 'Fraud detection system analyzing 7.4M banking transactions across 40,000+ accounts for the RBI Innovation Hub National Fraud Prevention Challenge.',
+    role: 'Data Scientist & ML Engineer — Fraud Analytics',
+    tech: ['Python', 'Data Science', 'Machine Learning', 'Fraud Detection'],
+    highlights: [
+      'Analyzed 7.4M real banking transactions',
+      'Fraud Lifecycle State Machine for pattern detection',
+      'Behavioral signals: ATM frequency, cash-out patterns',
+    ],
+    image: '/images/scamshield/thumbnail.png',
+    category: ['AI', 'FinTech'],
+  },
+  {
     title: 'Talent Track',
     slug: 'talenttrack',
     description: 'AI-powered fitness analysis platform that turns any smartphone camera into a professional-grade workout evaluation system.',
