@@ -25,6 +25,7 @@ const projects = [
       'Ensemble ML system with temporal pattern detection',
     ],
     image: '/images/scamshield/thumbnail.png',
+    githubUrl: 'https://github.com/sec23cb060/scamshield',
     category: ['All', 'AI', 'FinTech', 'Research'],
   },
   {

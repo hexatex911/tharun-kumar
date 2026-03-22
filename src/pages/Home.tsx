@@ -195,6 +195,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Achievement Highlight Section */}
+      <section className="py-8 sm:py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-primary/10 to-accent/10" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <ScrollReveal animation="scale-in">
+            <div className="max-w-4xl mx-auto">
+              <div className="relative p-6 sm:p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20 border-2 border-accent/30 shadow-2xl hover:shadow-accent/20 transition-shadow duration-500">
+                {/* Trophy Icon */}
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-2xl">🏆</span>
+                </div>
+                
+                <div className="text-center mt-4">
+                  <div className="inline-block px-4 py-1 bg-accent/20 rounded-full mb-4">
+                    <span className="text-sm font-semibold text-accent">LATEST ACHIEVEMENT</span>
+                  </div>
+                  
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold mb-4">
+                    Top 12 Finalist - National Fraud Prevention Challenge
+                  </h2>
+                  
+                  <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
+                    Selected as <span className="text-accent font-semibold">Top 12 out of 87 teams</span> for the 
+                    <span className="font-semibold"> National Fraud Prevention Challenge</span> by 
+                    <span className="font-semibold"> RBI Innovation Hub</span> and 
+                    <span className="font-semibold"> IIT Delhi TRYST</span>. 
+                    Built ScamShield, an AI-powered money mule detection system processing 
+                    <span className="text-accent font-semibold"> 400M+ transactions</span> with 
+                    near-perfect accuracy (AUC ~1.0, F1 0.93+).
+                  </p>
+
+                  <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+                    <Link to="/projects/scamshield">
+                      <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
+                        View ScamShield Project
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                  </div>
+
+                  <div className="mt-6 pt-6 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-semibold">Next:</span> Final Round at IIT Delhi | 
+                      <span className="font-semibold"> Platform:</span> MuleHunter.ai™ Digital Payments Intelligence
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Certifications Slider */}
       <section className="py-8 sm:py-12">
         <ScrollReveal animation="fade-up">

@@ -110,7 +110,9 @@ const projectDetails: Record<string, any> = {
       'Built scalable system capable of real-time fraud prevention',
       'Contributed to RBI Innovation Hub National Fraud Prevention Challenge',
     ],
-    links: [],
+    links: [
+      { label: 'GitHub Repository', url: 'https://github.com/sec23cb060/scamshield' },
+    ],
   },
   neurovision: {
     title: 'NeuroVision — AI-Powered Alzheimer\'s Detection System',
