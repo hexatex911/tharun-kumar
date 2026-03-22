@@ -65,25 +65,44 @@ const projectDetails: Record<string, any> = {
       { src: '/images/scamshield/08_add_features_correlation.png', caption: 'Additional features correlation matrix', orientation: 'horizontal' },
       { src: '/images/scamshield/10_per_fold_auc_model_comparison.png', caption: 'Per-fold AUC model comparison', orientation: 'horizontal' },
     ],
-    summary: '🏆 Top 12 Finalist (out of 87 teams) - RBI Innovation Hub & IIT Delhi National Fraud Prevention Challenge. ScamShield is an AI-powered money mule detection system that processed 400M+ banking transactions to identify fraudulent accounts used to move illegal money through the banking system.',
+    summary: '🏆 IIT Delhi Finalist (Top 12 out of 87 teams) - RBIH × IIT Delhi National Fraud Prevention Challenge. Multi-layer AI pipeline detecting money mule accounts used for laundering illicit funds. Qualified for Grand Final at IIT Delhi.',
     role: 'Data Scientist & ML Engineer — Fraud Analytics, Graph Analysis & Ensemble ML',
-    tech: ['Python', 'Machine Learning', 'Graph Analysis', 'Ensemble Models', 'scikit-learn', 'NetworkX', 'Pandas', 'Fraud Detection'],
+    tech: ['LightGBM', 'XGBoost', 'NetworkX', 'SHAP', 'PyArrow', 'Python', 'scikit-learn', 'Pandas'],
     problem: 'Money mule accounts are used to move illegal money through the banking system, making fraud detection extremely challenging. Traditional fraud detection systems rely on monthly checks that miss short-window mule activity. Most fraud-linked accounts operate within 1-2 weeks, making them invisible to conventional monitoring. Banks need real-time, explainable fraud detection that can identify behavioral patterns before significant losses occur while ensuring genuine users aren\'t wrongly flagged.',
-    approach: `Built a comprehensive AI-powered fraud detection system with:
-• 🏆 Selected as Top 12 Finalist out of 87 teams for Final Round at IIT Delhi
-• Processed 400M+ banking transactions through the AI pipeline
-• Fraud Lifecycle State Machine (FLSM) to track account progression: inactive → active → cash-out
-• Transaction Network Graph Analysis for identifying suspicious connection patterns
-• Ensemble ML System combining multiple models with proper calibration:
-  - Random Forest for behavioral patterns
-  - Gradient Boosting for temporal features
-  - Graph Neural Networks for network analysis
-  - XGBoost for transaction patterns
-• Temporal Layer to catch suspicious activity patterns over time
-• Red Herring Detection across 7 categories to minimize false positives
-• Feature Engineering: ATM frequency, cash-out patterns, multi-source deposits
-• Model Calibration to ensure genuine users aren't wrongly flagged
-• Explainable AI for regulatory compliance and bank operations`,
+    approach: `Built a comprehensive multi-layer AI pipeline with:
+
+🏆 Achievement: IIT Delhi Finalist - Top 12 out of 87 teams
+
+📊 Performance Metrics:
+• AUC-ROC: 0.9424
+• F1 Score: 0.6816
+• Transactions Processed: 400M+
+• Features Engineered: 164
+
+🔹 Pipeline Architecture:
+Data Ingestion → FLSM Engine → Graph Features → RH Defense → Feature Engineering → Ensemble + Calibration → Temporal IoU
+
+🔹 FLSM Engine (Fraud Lifecycle State Machine):
+• 5-state fraud lifecycle: DORMANT → WARMING → BURST → EXPLOIT → EXIT
+• Tracks account progression through fraud stages
+• Identifies suspicious state transitions and timing patterns
+
+🔹 Graph Intelligence:
+• 2.8M+ edges analyzed across transaction networks
+• PageRank algorithm for identifying central mule accounts
+• Bidirectional ratio analysis for money flow patterns
+• Mule overlap detection across connected accounts
+
+🔹 RH Defense (Red Herring Defense):
+• 7-category taxonomy preventing false positives
+• Protects legitimate high-volume accounts
+• Distinguishes genuine business activity from fraud
+
+🔹 Ensemble ML System:
+• LightGBM + XGBoost with Platt calibration
+• 164 engineered features across multiple dimensions
+• SHAP for explainable AI and feature importance
+• Temporal IoU for time-based pattern matching`,
     challenges: [
       'Processing and analyzing 400M+ transactions efficiently at scale',
       'Identifying fraud as a process rather than isolated events',
@@ -96,19 +115,19 @@ const projectDetails: Record<string, any> = {
       'Integrating multiple data modalities: transactions, networks, temporal patterns',
     ],
     outcomes: [
-      '🏆 Top 12 Finalist out of 87 teams - Selected for Final Round at IIT Delhi',
-      'Successfully processed 400M+ banking transactions through AI pipeline',
-      'Public Performance: AUC ~0.98, F1 Score ~0.85',
-      'Private Performance: AUC approaching 1.0, F1 Score exceeding 0.93',
-      'Developed Fraud Lifecycle State Machine (FLSM) for pattern detection',
-      'Transaction Network Graph Analysis for identifying mule networks',
-      'Ensemble ML system with proper calibration for production deployment',
-      'Temporal pattern detection to catch time-based suspicious activity',
-      'Red herring detection system to minimize false positives',
-      'Created clear operational insights for banks and RBI regulators',
-      'Demonstrated fraud detection as a process, not single events',
-      'Built scalable system capable of real-time fraud prevention',
-      'Contributed to RBI Innovation Hub National Fraud Prevention Challenge',
+      '🏆 IIT Delhi Finalist - Top 12 out of 87 teams',
+      'Qualified for Grand Final at IIT Delhi',
+      'AUC-ROC: 0.9424 | F1 Score: 0.6816',
+      'Successfully processed 400M+ banking transactions',
+      'FLSM Engine: 5-state fraud lifecycle (DORMANT → WARMING → BURST → EXPLOIT → EXIT)',
+      'Graph Intelligence: 2.8M+ edges analyzed with PageRank',
+      'RH Defense: 7-category taxonomy preventing false positives',
+      '164 engineered features across multiple dimensions',
+      'Ensemble system: LightGBM + XGBoost + Platt calibration',
+      'SHAP integration for explainable AI',
+      'Temporal IoU for time-based pattern detection',
+      'Production-ready for MuleHunter.ai™ platform',
+      'Contributed to RBIH National Fraud Prevention Challenge',
     ],
     links: [
       { label: 'GitHub Repository', url: 'https://github.com/sec23cb060/scamshield' },

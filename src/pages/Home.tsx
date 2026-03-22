@@ -17,13 +17,13 @@ const featuredProjects = [
   {
     title: 'ScamShield',
     slug: 'scamshield',
-    description: '🏆 Top 12 Finalist (out of 87 teams) - RBI Innovation Hub & IIT Delhi National Fraud Prevention Challenge. AI-powered fraud detection analyzing 400M+ transactions.',
+    description: '🏆 IIT Delhi Finalist - Multi-layer AI pipeline detecting money mule accounts. FLSM Engine + Graph Intelligence + Ensemble ML on 400M+ transactions.',
     role: 'Data Scientist & ML Engineer — Fraud Analytics',
-    tech: ['Python', 'Machine Learning', 'Graph Analysis', 'Fraud Detection'],
+    tech: ['LightGBM', 'XGBoost', 'NetworkX', 'SHAP'],
     highlights: [
-      '🏆 Selected as Top 12 Finalist out of 87 teams',
-      'Processed 400M+ banking transactions',
-      'Public AUC: 0.98, F1: 0.85 | Private AUC: ~1.0, F1: 0.93+',
+      '🏆 IIT Delhi Finalist (Top 12/87 teams)',
+      'AUC: 0.9424, F1: 0.6816, 400M+ transactions',
+      'FLSM: 5-state fraud lifecycle + Graph: 2.8M+ edges',
     ],
     image: '/images/scamshield/thumbnail.png',
     category: ['AI', 'FinTech'],
@@ -213,17 +213,17 @@ export default function Home() {
                   </div>
                   
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold mb-4">
-                    Top 12 Finalist - National Fraud Prevention Challenge
+                    Finalist - National Fraud Prevention Challenge
                   </h2>
                   
                   <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Selected as <span className="text-accent font-semibold">Top 12 out of 87 teams</span> for the 
+                    Selected as <span className="text-accent font-semibold">Finalist (Top 12 out of 87 teams)</span> for the 
                     <span className="font-semibold"> National Fraud Prevention Challenge</span> by 
                     <span className="font-semibold"> RBI Innovation Hub</span> and 
                     <span className="font-semibold"> IIT Delhi TRYST</span>. 
                     Built ScamShield, an AI-powered money mule detection system processing 
                     <span className="text-accent font-semibold"> 400M+ transactions</span> with 
-                    near-perfect accuracy (AUC ~1.0, F1 0.93+).
+                    exceptional accuracy (AUC 0.94, F1 0.68).
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
