@@ -47,45 +47,67 @@ import insightiqCompetitorsGreentech from '@/assets/insightiq-competitors-greent
 
 const projectDetails: Record<string, any> = {
   scamshield: {
-    title: 'ScamShield — Fraud Detection & Prevention System',
+    title: 'ScamShield — AI-Powered Money Mule Detection System',
     image: '/images/scamshield/thumbnail.png',
     gallery: [
+      { src: '/images/scamshield/Screenshot 2026-03-21 214301.png', caption: 'ScamShield - Top 12 Finalist Achievement', orientation: 'horizontal' },
       { src: '/images/scamshield/1.png', caption: 'ScamShield dashboard overview', orientation: 'horizontal' },
       { src: '/images/scamshield/2.png', caption: 'Fraud Lifecycle State Machine visualization', orientation: 'horizontal' },
       { src: '/images/scamshield/3.png', caption: 'Transaction pattern analysis', orientation: 'horizontal' },
       { src: '/images/scamshield/4.png', caption: 'Behavioral signals and anomaly detection', orientation: 'horizontal' },
       { src: '/images/scamshield/5.png', caption: 'ATM withdrawal frequency analysis', orientation: 'horizontal' },
       { src: '/images/scamshield/6.png', caption: 'Cash-out pattern detection', orientation: 'horizontal' },
+      { src: '/images/scamshield/01_class_balance_dataset_snapshot.png', caption: 'Dataset class balance analysis', orientation: 'horizontal' },
+      { src: '/images/scamshield/04_flsm_state_distribution_mule_vs_legit.png', caption: 'FLSM state distribution: Mule vs Legitimate accounts', orientation: 'horizontal' },
+      { src: '/images/scamshield/05_graph_feature_distributions.png', caption: 'Graph feature distributions for network analysis', orientation: 'horizontal' },
+      { src: '/images/scamshield/06_red_herring_7_categories.png', caption: 'Red herring detection across 7 categories', orientation: 'horizontal' },
+      { src: '/images/scamshield/07_red_herring_category_breakdown.png', caption: 'Detailed red herring category breakdown', orientation: 'horizontal' },
+      { src: '/images/scamshield/08_add_features_correlation.png', caption: 'Additional features correlation matrix', orientation: 'horizontal' },
+      { src: '/images/scamshield/10_per_fold_auc_model_comparison.png', caption: 'Per-fold AUC model comparison', orientation: 'horizontal' },
     ],
-    summary: 'ScamShield is a fraud detection system built for the Reserve Bank Innovation Hub (RBIH) National Fraud Prevention Challenge. Analyzed 7.4 million real banking transactions across 40,000+ accounts to identify mule activity and fraud patterns.',
-    role: 'Data Scientist & ML Engineer — Fraud Analytics & Pattern Detection',
-    tech: ['Python', 'Data Science', 'Machine Learning', 'Pandas', 'NumPy', 'Scikit-learn', 'Fraud Detection'],
-    problem: 'Traditional fraud detection systems rely on monthly checks that miss short-window mule activity. Most fraud-linked accounts operate within 1-2 weeks, making them invisible to conventional monitoring. Banks need real-time, explainable fraud detection that can identify behavioral patterns before significant losses occur.',
-    approach: `Built a comprehensive fraud detection system with:
-• Analyzed 7.4 million real banking transactions across 40,000+ accounts
-• Developed Fraud Lifecycle State Machine to track account progression from inactive → active → cash-out
-• Identified behavioral signals:
-  - ATM withdrawal frequency patterns
-  - Multiple source deposits followed by rapid cash-outs
-  - Short-window activity (1-2 weeks) indicating mule behavior
-• Pattern recognition instead of single-event detection
-• Foundation for explainable machine learning in Phase 2
-• Clear operational insights that banks and regulators can understand and act on`,
+    summary: '🏆 Top 12 Finalist (out of 87 teams) - RBI Innovation Hub & IIT Delhi National Fraud Prevention Challenge. ScamShield is an AI-powered money mule detection system that processed 400M+ banking transactions to identify fraudulent accounts used to move illegal money through the banking system.',
+    role: 'Data Scientist & ML Engineer — Fraud Analytics, Graph Analysis & Ensemble ML',
+    tech: ['Python', 'Machine Learning', 'Graph Analysis', 'Ensemble Models', 'scikit-learn', 'NetworkX', 'Pandas', 'Fraud Detection'],
+    problem: 'Money mule accounts are used to move illegal money through the banking system, making fraud detection extremely challenging. Traditional fraud detection systems rely on monthly checks that miss short-window mule activity. Most fraud-linked accounts operate within 1-2 weeks, making them invisible to conventional monitoring. Banks need real-time, explainable fraud detection that can identify behavioral patterns before significant losses occur while ensuring genuine users aren\'t wrongly flagged.',
+    approach: `Built a comprehensive AI-powered fraud detection system with:
+• 🏆 Selected as Top 12 Finalist out of 87 teams for Final Round at IIT Delhi
+• Processed 400M+ banking transactions through the AI pipeline
+• Fraud Lifecycle State Machine (FLSM) to track account progression: inactive → active → cash-out
+• Transaction Network Graph Analysis for identifying suspicious connection patterns
+• Ensemble ML System combining multiple models with proper calibration:
+  - Random Forest for behavioral patterns
+  - Gradient Boosting for temporal features
+  - Graph Neural Networks for network analysis
+  - XGBoost for transaction patterns
+• Temporal Layer to catch suspicious activity patterns over time
+• Red Herring Detection across 7 categories to minimize false positives
+• Feature Engineering: ATM frequency, cash-out patterns, multi-source deposits
+• Model Calibration to ensure genuine users aren't wrongly flagged
+• Explainable AI for regulatory compliance and bank operations`,
     challenges: [
-      'Processing and analyzing 7.4 million transactions efficiently',
+      'Processing and analyzing 400M+ transactions efficiently at scale',
       'Identifying fraud as a process rather than isolated events',
       'Detecting short-window mule activity (1-2 weeks) missed by monthly checks',
-      'Building explainable patterns that regulators can understand',
-      'Distinguishing legitimate behavior from fraud patterns',
+      'Building explainable patterns that regulators can understand and trust',
+      'Distinguishing legitimate behavior from fraud patterns (minimizing false positives)',
       'Creating actionable insights for real-time fraud prevention',
+      'Ensuring model calibration to protect genuine users',
+      'Handling class imbalance in fraud detection datasets',
+      'Integrating multiple data modalities: transactions, networks, temporal patterns',
     ],
     outcomes: [
-      'Successfully analyzed 7.4M transactions across 40,000+ accounts',
-      'Developed Fraud Lifecycle State Machine for pattern detection',
-      'Identified key behavioral signals: ATM frequency, cash-out patterns',
-      'Built foundation for Phase 2 explainable ML implementation',
-      'Created clear operational insights for banks and regulators',
+      '🏆 Top 12 Finalist out of 87 teams - Selected for Final Round at IIT Delhi',
+      'Successfully processed 400M+ banking transactions through AI pipeline',
+      'Public Performance: AUC ~0.98, F1 Score ~0.85',
+      'Private Performance: AUC approaching 1.0, F1 Score exceeding 0.93',
+      'Developed Fraud Lifecycle State Machine (FLSM) for pattern detection',
+      'Transaction Network Graph Analysis for identifying mule networks',
+      'Ensemble ML system with proper calibration for production deployment',
+      'Temporal pattern detection to catch time-based suspicious activity',
+      'Red herring detection system to minimize false positives',
+      'Created clear operational insights for banks and RBI regulators',
       'Demonstrated fraud detection as a process, not single events',
+      'Built scalable system capable of real-time fraud prevention',
       'Contributed to RBI Innovation Hub National Fraud Prevention Challenge',
     ],
     links: [],

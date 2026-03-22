@@ -17,13 +17,13 @@ const featuredProjects = [
   {
     title: 'ScamShield',
     slug: 'scamshield',
-    description: 'Fraud detection system analyzing 7.4M banking transactions across 40,000+ accounts for the RBI Innovation Hub National Fraud Prevention Challenge.',
+    description: '🏆 Top 12 Finalist (out of 87 teams) - RBI Innovation Hub & IIT Delhi National Fraud Prevention Challenge. AI-powered fraud detection analyzing 400M+ transactions.',
     role: 'Data Scientist & ML Engineer — Fraud Analytics',
-    tech: ['Python', 'Data Science', 'Machine Learning', 'Fraud Detection'],
+    tech: ['Python', 'Machine Learning', 'Graph Analysis', 'Fraud Detection'],
     highlights: [
-      'Analyzed 7.4M real banking transactions',
-      'Fraud Lifecycle State Machine for pattern detection',
-      'Behavioral signals: ATM frequency, cash-out patterns',
+      '🏆 Selected as Top 12 Finalist out of 87 teams',
+      'Processed 400M+ banking transactions',
+      'Public AUC: 0.98, F1: 0.85 | Private AUC: ~1.0, F1: 0.93+',
     ],
     image: '/images/scamshield/thumbnail.png',
     category: ['AI', 'FinTech'],
