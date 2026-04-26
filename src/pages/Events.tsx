@@ -54,6 +54,28 @@ const events2023: Event[] = [
   },
 ];
 
+const events2026: Event[] = [
+  {
+    date: '21 March 2026',
+    title: 'National Fraud Prevention Challenge (Finale)',
+    institution: 'Reserve Bank Innovation Hub (RBIH) & IIT Delhi TRYST',
+    project: 'ScamShield',
+    achievement: 'Finalist (Top 12/500 Teams)',
+    details: 'Participated in the national finale for fraud detection innovation. Built ScamShield, an AI-powered money mule detection system processing 400M+ transactions with exceptional accuracy (AUC 0.94, F1 0.68). Gained deep insights into MuleHunter.AI and real-time fraud detection use cases. Had the privilege of learning from industry leaders including Devraj Sanyal (Chief AI & Data Science Officer), Chandrashekhar Bhosle (Founding Member, CRED), and Mujiruddin Shaikh (CTO, RBIH). The journey was filled with invaluable connections, late-night collaborations, and memories that will last a lifetime. A heartfelt thank you to the jury members and the entire organizing team for creating such an inspiring environment.',
+    photos: [
+      '/scamshield/finals/DSC04036.JPG',
+      '/scamshield/finals/DSC04125.JPG',
+      '/scamshield/finals/DSC04126.JPG',
+      '/scamshield/finals/DSC04127.JPG',
+      '/scamshield/finals/DSC04263.JPG',
+      '/scamshield/finals/scamshield cert.jpeg',
+      '/scamshield/finals/WhatsApp Image 2026-04-12 at 8.21.04 AM.jpeg',
+      '/scamshield/finals/WhatsApp Image 2026-04-12 at 8.21.05 AM.jpeg',
+      '/scamshield/finals/WhatsApp Image 2026-04-12 at 8.21.06 AM.jpeg',
+    ],
+  },
+];
+
 const events2025: Event[] = [
   {
     date: '27 August 2025',
@@ -209,16 +231,16 @@ function ImageGallery({ photos, title }: { photos: string[]; title: string }) {
 
   if (photos.length === 0) return null;
 
+  // Show only first 2 photos in the grid
+  const displayPhotos = photos.slice(0, 2);
+  const hasMorePhotos = photos.length > 2;
+
   return (
     <>
-      {/* Gallery Grid */}
+      {/* Gallery Grid - Always show 2 photos */}
       <div className="mt-4">
-        <div className={`grid gap-3 ${
-          photos.length === 1 ? 'grid-cols-1' : 
-          photos.length === 2 ? 'grid-cols-2' : 
-          'grid-cols-2 md:grid-cols-3'
-        }`}>
-          {photos.map((photo, idx) => (
+        <div className="grid grid-cols-2 gap-3">
+          {displayPhotos.map((photo, idx) => (
             <div
               key={idx}
               onClick={() => openLightbox(idx)}
@@ -227,9 +249,7 @@ function ImageGallery({ photos, title }: { photos: string[]; title: string }) {
               <img
                 src={photo}
                 alt={`${title} - Photo ${idx + 1}`}
-                className={`w-full h-full transition-all duration-300 group-hover:scale-105 ${
-                  photo.includes('unscripted-screenshot.png') ? 'object-right object-cover' : 'object-cover'
-                }`}
+                className={`w-full h-full transition-all duration-300 group-hover:scale-105 object-cover`}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
@@ -237,10 +257,12 @@ function ImageGallery({ photos, title }: { photos: string[]; title: string }) {
                   <ImageIcon className="w-6 h-6 text-white" />
                 </div>
               </div>
-              {/* Image counter for multiple photos */}
-              {photos.length > 1 && (
-                <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
-                  {idx + 1}/{photos.length}
+              {/* Show "+X more" overlay on second image if there are more photos */}
+              {idx === 1 && hasMorePhotos && (
+                <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+                  <div className="text-white text-2xl font-bold">
+                    +{photos.length - 2} more
+                  </div>
                 </div>
               )}
             </div>
@@ -248,7 +270,7 @@ function ImageGallery({ photos, title }: { photos: string[]; title: string }) {
         </div>
       </div>
 
-      {/* Enhanced Lightbox Modal */}
+      {/* Enhanced Lightbox Modal with Carousel */}
       {lightboxOpen && (
         <div className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-sm overflow-auto">
           {/* Loading indicator */}
@@ -323,12 +345,12 @@ function ImageGallery({ photos, title }: { photos: string[]; title: string }) {
 
           {/* Thumbnail Strip for multiple images */}
           {photos.length > 1 && (
-            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 bg-black/50 backdrop-blur-sm rounded-full p-2">
+            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2 bg-black/50 backdrop-blur-sm rounded-full p-2 max-w-[90vw] overflow-x-auto">
               {photos.map((photo, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`w-12 h-12 rounded-lg overflow-hidden border-2 transition-all ${
+                  className={`w-12 h-12 rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${
                     idx === currentIndex 
                       ? 'border-white scale-110' 
                       : 'border-white/30 hover:border-white/60'
@@ -435,6 +457,28 @@ export default function Events() {
             <p className="text-xl text-muted-foreground animate-slide-up">
               Competitions won, papers presented, and recognition earned
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 Events */}
+      <section className="pb-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <ScrollReveal animation="fade-up">
+              <div className="flex items-center gap-3 mb-8">
+                <Calendar className="h-6 w-6 text-accent" />
+                <h2 className="text-3xl font-heading font-bold">2026</h2>
+              </div>
+            </ScrollReveal>
+
+            <div className="space-y-6">
+              {events2026.map((event, idx) => (
+                <ScrollReveal key={idx} animation="fade-up" delay={idx * 100}>
+                  <EventCard event={event} />
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
