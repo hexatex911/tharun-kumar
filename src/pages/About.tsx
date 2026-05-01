@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Code, Brain, Database, Wrench, GraduationCap, Award } from 'lucide-react';
 import aboutBg from '@/assets/about-bg.jpg';
-import profilePersonal from '@/assets/profile-professional.png';
+import profilePersonal from '/images/profile-new.png';
 
 const skills = {
   Frontend: ['React', 'Next.js', 'Flutter', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],

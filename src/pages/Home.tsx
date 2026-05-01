@@ -8,7 +8,7 @@ import { CertificationSlider } from '@/components/CertificationSlider';
 import { TypewriterText } from '@/components/TypewriterText';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import { innovationProjects } from '@/data/researchProjects';
-import profileProfessional from '/profile/1775960428409 (1).png';
+import profileProfessional from '/images/profile-new.png';
 import talenttrackHero from '@/assets/talenttrack-cover.png';
 import aeroponicsMock from '@/assets/aeroponics-hero.jpeg';
 import insightiqMock from '@/assets/insightiq-dashboard.png';
