@@ -6,6 +6,7 @@ import { ResearchCard } from '@/components/ResearchCard';
 import { ScrollReveal } from '@/components/ScrollReveal';
 import { CertificationSlider } from '@/components/CertificationSlider';
 import { TypewriterText } from '@/components/TypewriterText';
+import { InternshipNotification } from '@/components/InternshipNotification';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import { innovationProjects } from '@/data/researchProjects';
 import profileProfessional from '/images/profile-new.png';
@@ -89,6 +90,9 @@ const featuredProjects = [
 export default function Home() {
   return (
     <div className="min-h-screen">
+      {/* Internship Notification Toast */}
+      <InternshipNotification />
+
       {/* Hero Section */}
       <section className="relative flex items-center justify-center pt-32 pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent" />
@@ -197,49 +201,92 @@ export default function Home() {
 
       {/* Achievement Highlight Section */}
       <section className="py-8 sm:py-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent/10 via-primary/10 to-accent/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-background to-primary/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <ScrollReveal animation="scale-in">
-            <div className="max-w-4xl mx-auto">
-              <div className="relative p-6 sm:p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20 border-2 border-accent/30 shadow-2xl hover:shadow-accent/20 transition-shadow duration-500">
-                {/* Trophy Icon */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-2xl">🏆</span>
-                </div>
+          <ScrollReveal animation="fade-up">
+            <div className="text-center mb-8">
+              <div className="inline-block px-5 py-2 bg-accent/10 border border-accent/20 rounded-full mb-3">
+                <span className="text-sm font-semibold text-accent uppercase tracking-wider">Recent Achievement</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-heading font-bold mb-2">Latest Recognition</h2>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="scale-in" delay={100}>
+            <div className="max-w-5xl mx-auto">
+              <div className="relative group">
+                {/* Card with elegant gradient border */}
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-500" />
                 
-                <div className="text-center mt-4">
-                  <div className="inline-block px-4 py-1 bg-accent/20 rounded-full mb-4">
-                    <span className="text-sm font-semibold text-accent">LATEST ACHIEVEMENT</span>
-                  </div>
-                  
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold mb-4">
-                    Finalist - National Fraud Prevention Challenge
-                  </h2>
-                  
-                  <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
-                    Selected as <span className="text-accent font-semibold">Finalist (Top 12 out of 87 teams)</span> for the 
-                    <span className="font-semibold"> National Fraud Prevention Challenge</span> by 
-                    <span className="font-semibold"> RBI Innovation Hub</span> and 
-                    <span className="font-semibold"> IIT Delhi TRYST</span>. 
-                    Built ScamShield, an AI-powered money mule detection system processing 
-                    <span className="text-accent font-semibold"> 400M+ transactions</span> with 
-                    exceptional accuracy (AUC 0.94, F1 0.68).
-                  </p>
+                <div className="relative bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl overflow-hidden shadow-xl">
+                  <div className="grid md:grid-cols-[300px,1fr] gap-6">
+                    {/* Image Section */}
+                    <div className="relative h-full min-h-[200px] md:min-h-0">
+                      <img 
+                        src="/images/events/1782191504408.jpg?v=2" 
+                        alt="STATATHON 2025 Team RenoX"
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
 
-                  <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                    <Link to="/projects/scamshield">
-                      <Button size="lg" className="shadow-lg hover:shadow-xl transition-shadow">
-                        View ScamShield Project
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
-                    </Link>
-                  </div>
+                    {/* Content Section */}
+                    <div className="p-6 md:py-8 md:pr-8 md:pl-0">
+                      {/* Badges */}
+                      <div className="flex flex-wrap items-center gap-2 mb-3">
+                        <span className="px-3 py-1 bg-gray-500/20 text-gray-300 text-xs font-semibold rounded-full border border-gray-500/30">
+                          RUNNER-UP
+                        </span>
+                        <span className="px-3 py-1 bg-accent/20 text-accent text-xs font-semibold rounded-full border border-accent/30">
+                          NATIONAL LEVEL
+                        </span>
+                        <span className="text-sm text-muted-foreground">June 2026</span>
+                      </div>
+                      
+                      <h3 className="text-xl sm:text-2xl font-heading font-bold mb-2">
+                        STATATHON 2025 - National Hackathon
+                      </h3>
+                      
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-4">
+                        Ministry of Statistics & Programme Implementation (MoSPI) & Ministry of Education (MoE), Govt. of India
+                      </p>
 
-                  <div className="mt-6 pt-6 border-t border-border/50">
-                    <p className="text-sm text-muted-foreground">
-                      <span className="font-semibold">Next:</span> Final Round at IIT Delhi | 
-                      <span className="font-semibold"> Platform:</span> MuleHunter.ai™ Digital Payments Intelligence
-                    </p>
+                      {/* Stats Grid - Compact */}
+                      <div className="grid grid-cols-4 gap-3 mb-4 p-4 bg-muted/30 rounded-lg">
+                        <div className="text-center">
+                          <div className="text-lg sm:text-xl font-bold text-accent">5,300</div>
+                          <div className="text-[10px] sm:text-xs text-muted-foreground">Teams</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg sm:text-xl font-bold text-accent">Top 25</div>
+                          <div className="text-[10px] sm:text-xs text-muted-foreground">Finalists</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg sm:text-xl font-bold text-accent">0.5%</div>
+                          <div className="text-[10px] sm:text-xs text-muted-foreground">Selected</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg sm:text-xl font-bold text-accent">₹50K</div>
+                          <div className="text-[10px] sm:text-xs text-muted-foreground">Prize</div>
+                        </div>
+                      </div>
+
+                      {/* Description - Compact */}
+                      <p className="text-sm text-foreground/80 mb-3 leading-relaxed">
+                        Led research and case study analysis for <span className="font-semibold text-accent">Team RenoX</span>, 
+                        developing the statistical formulation that became the turning point in our solution.
+                      </p>
+
+                      {/* Action Button */}
+                      <Link to="/events">
+                        <Button 
+                          size="sm" 
+                          className="bg-gradient-to-r from-accent to-primary hover:shadow-lg hover:shadow-accent/20 transition-all duration-300"
+                        >
+                          View All Achievements
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

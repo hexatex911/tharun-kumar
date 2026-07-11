@@ -4,6 +4,20 @@ import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
+    year: '2026',
+    title: 'Reserve Bank Innovation Hub (RBIH)',
+    role: 'AI and Data Science Intern',
+    type: 'Internship',
+    logo: '/images/experience/rbih_logo.png',
+    description: 'Selected for AI and Data Science Internship at RBI Innovation Hub, working on cutting-edge financial technology and fraud detection systems. Building upon the ScamShield project experience from the National Fraud Prevention Challenge.',
+    tech: ['AI', 'Data Science', 'Machine Learning', 'FinTech', 'Fraud Detection'],
+    achievements: [
+      'Selected for prestigious RBI Innovation Hub internship program',
+      'Working on advanced fraud detection and financial technology solutions',
+      'Applying AI/ML techniques to real-world banking and payment systems',
+    ],
+  },
+  {
     year: '2025',
     title: '1M1B (One Million for One Billion)',
     role: 'AI + Sustainability Intern (Ongoing)',
@@ -154,7 +168,7 @@ export default function Experience() {
                             <img 
                               src={exp.logo} 
                               alt={`${exp.title} logo`}
-                              className="h-8 w-8 object-contain rounded"
+                              className="h-10 w-10 object-contain rounded"
                             />
                           ) : (
                             <Briefcase className="h-5 w-5 text-accent flex-shrink-0" />

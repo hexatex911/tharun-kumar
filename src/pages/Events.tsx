@@ -56,6 +56,23 @@ const events2023: Event[] = [
 
 const events2026: Event[] = [
   {
+    date: 'June 2026',
+    title: 'STATATHON 2025 – National Hackathon',
+    institution: 'MoSPI & MoE, Govt. of India | Manav Rachna International Institute, Faridabad',
+    department: 'Ministry of Statistics and Programme Implementation (MoSPI) & Ministry of Education (MoE)',
+    project: 'RenoX - Data Anonymization & Encryption Tool',
+    achievement: 'Runner-Up (Top 0.5% of 5,300 Teams)',
+    details: 'Led research and case study analysis for Team RenoX, securing Runner-Up position with ₹50,000 prize and seed funding. Advanced from 5,300 teams nationwide to Top 25 Grand Finalists (top 0.5%), then to Top 5 in the finals. Problem Statement: Evaluation of Effective Anonymization/Data Encryption and Building a Safe Tool. My role focused on comprehensive research, statistical formulation, and case study development that became the turning point in our solution. Each team member delivered specific insights aligned with the jury evaluation framework, creating a collective ownership approach that distinguished us from competitors.',
+    photos: [
+      '/images/events/1782191503679.jpg',
+      '/images/events/1782191504400.jpg',
+      '/images/events/1782191504408.jpg',
+      '/images/events/1782191504419.jpg',
+      '/images/events/1782191504554.jpg',
+      '/images/events/1782191505176.jpg',
+    ],
+  },
+  {
     date: '21 March 2026',
     title: 'National Fraud Prevention Challenge (Finale)',
     institution: 'Reserve Bank Innovation Hub (RBIH) & IIT Delhi TRYST',

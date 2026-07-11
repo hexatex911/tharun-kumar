@@ -7,10 +7,37 @@ import aboutBg from '@/assets/about-bg.jpg';
 import profilePersonal from '/images/profile-new.png';
 
 const skills = {
-  Frontend: ['React', 'Next.js', 'Flutter', 'Tailwind CSS', 'TypeScript', 'HTML/CSS'],
-  Backend: ['Node.js', 'Python', 'PostgreSQL', 'Firebase', 'Express'],
-  'AI & CV': ['MediaPipe', 'OpenCV', 'LLaMA', 'TensorFlow', 'Ollama', 'Computer Vision'],
-  Tools: ['Git', 'Docker', 'Netlify', 'Figma', 'WordPress', 'VS Code'],
+  Frontend: [
+    { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'Next.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg' },
+    { name: 'Flutter', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+    { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    { name: 'TypeScript', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    { name: 'HTML/CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+  ],
+  Backend: [
+    { name: 'Node.js', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+    { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'PostgreSQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+    { name: 'Firebase', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+    { name: 'Express', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+  ],
+  'AI & CV': [
+    { name: 'TensorFlow', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg' },
+    { name: 'OpenCV', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg' },
+    { name: 'PyTorch', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg' },
+    { name: 'MediaPipe', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg' },
+    { name: 'LLaMA', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+    { name: 'Computer Vision', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg' },
+  ],
+  Tools: [
+    { name: 'Git', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+    { name: 'Docker', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+    { name: 'Figma', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    { name: 'WordPress', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg' },
+    { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+    { name: 'Netlify', logo: 'https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg' },
+  ],
 };
 
 const certifications = [
@@ -175,11 +202,24 @@ export default function About() {
                       <Icon className="h-5 w-5 text-accent" />
                       <h3 className="text-lg font-heading font-bold">{category}</h3>
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-3">
                       {skillList.map((skill) => (
-                        <Badge key={skill} variant="secondary">
-                          {skill}
-                        </Badge>
+                        <div 
+                          key={skill.name} 
+                          className="flex items-center gap-2 px-3 py-2 bg-muted rounded-lg hover:bg-accent/10 transition-colors border border-border"
+                          title={skill.name}
+                        >
+                          <img 
+                            src={skill.logo} 
+                            alt={`${skill.name} logo`}
+                            className="h-5 w-5 object-contain"
+                            onError={(e) => {
+                              // Fallback if image fails to load
+                              (e.target as HTMLImageElement).style.display = 'none';
+                            }}
+                          />
+                          <span className="text-sm font-medium">{skill.name}</span>
+                        </div>
                       ))}
                     </div>
                   </Card>
